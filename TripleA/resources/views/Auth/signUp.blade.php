@@ -4,6 +4,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Sign Up Page - Triple A Account</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="https://kit.fontawesome.com/39c5fdd9a0.js" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
@@ -60,58 +61,71 @@
     }
   </style>
   </head>
-<body class="font-sans">
+<body class="font-sans">  
 <div class="relative flex min-h-screen w-full flex-col items-center bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<h2 class="text-base md:xl font-semibold capitalize text-red-600 pt-2">hii</h2>
 <div class="flex w-full max-w-md flex-1 flex-col justify-center px-6 py-12">
 <div class="flex justify-center pb-8">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary dark:text-accent text-4xl">cruelty_free</span>
-<span class="font-display text-2xl font-bold tracking-wide text-text-light dark:text-text-dark">Triple A</span>
+<div class="text-center gap-2 text-2xl md:text-5xl ">
+<i class="fa-solid fa-fish-fins fa-bounce text-primary dark:text-accent "></i>
+<h2 class="font-display font-bold tracking-wide text-text-light dark:text-text-dark">Triple A Oven Dried Catfish</h2>
 </div>
 </div>
-<h1 class="text-text-light dark:text-text-dark font-display tracking-tight text-4xl font-bold leading-tight text-center pb-8">Create your account</h1>
+<h1 class="text-text-light dark:text-text-dark font-display tracking-tight text-2xl md:text-4xl font-thin leading-tight text-center pb-8">Create your account</h1>
+<form action="{{route('signup.process')}}" method="POST">
+    @csrf
 <div class="w-full">
 <div class="flex w-full flex-wrap items-end gap-4 pb-4">
 <label class="flex flex-col min-w-40 flex-1">
 <p class="text-text-light dark:text-text-dark text-base font-medium leading-normal pb-2">Full Name</p>
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark focus:border-accent dark:focus:border-accent h-14 placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark p-[15px] text-base font-normal leading-normal ring-0 focus:ring-2 focus:ring-accent/30" placeholder="Enter your full name" type="text" value=""/>
+<input name="name" class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark focus:border-accent dark:focus:border-accent h-14 placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark p-[15px] text-base font-normal leading-normal ring-0 focus:ring-2 focus:ring-accent/30" placeholder="Enter your full name" type="text" value="{{old('name')}}"/>
+@error('name')
+<h2 class="text-sm md:text-base font-semibold capitalize text-red-600 pt-2">{{$message}}</h2>  
+@enderror
 </label>
 </div>
 <div class="flex w-full flex-wrap items-end gap-4 pb-4">
 <label class="flex flex-col min-w-40 flex-1">
 <p class="text-text-light dark:text-text-dark text-base font-medium leading-normal pb-2">Email Address</p>
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark focus:border-accent dark:focus:border-accent h-14 placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark p-[15px] text-base font-normal leading-normal ring-0 focus:ring-2 focus:ring-accent/30" placeholder="Enter your email address" type="email" value=""/>
+<input name='email' class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark focus:border-accent dark:focus:border-accent h-14 placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark p-[15px] text-base font-normal leading-normal ring-0 focus:ring-2 focus:ring-accent/30" placeholder="Enter your email address" type="email" value="{{old('email')}}"/>
+@error('email')
+<h2 class="text-sm md:text-base font-semibold capitalize text-red-600 pt-2">{{$message}}</h2>  
+@enderror
 </label>
 </div>
 <div class="flex w-full flex-wrap items-end gap-4 pb-4">
 <label class="flex flex-col min-w-40 flex-1">
 <p class="text-text-light dark:text-text-dark text-base font-medium leading-normal pb-2">Password</p>
 <div class="relative flex w-full flex-1 items-stretch">
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark focus:border-accent dark:focus:border-accent h-14 placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark p-[15px] pr-12 text-base font-normal leading-normal ring-0 focus:ring-2 focus:ring-accent/30" placeholder="Create a password" type="password" value=""/>
+<input name="password" class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark focus:border-accent dark:focus:border-accent h-14 placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark p-[15px] pr-12 text-base font-normal leading-normal ring-0 focus:ring-2 focus:ring-accent/30" placeholder="Create a password" type="password" value=""/>
 <button aria-label="Toggle password visibility" class="text-text-muted-light dark:text-text-muted-dark absolute inset-y-0 right-0 flex items-center pr-4">
 <span class="material-symbols-outlined">visibility_off</span>
 </button>
 </div>
+@error('password')
+<h2 class="text-sm md:text-base font-semibold capitalize text-red-600 pt-2">{{$message}}</h2>  
+@enderror
 </label>
 </div>
 <div class="flex w-full flex-wrap items-end gap-4 pb-2">
 <label class="flex flex-col min-w-40 flex-1">
 <p class="text-text-light dark:text-text-dark text-base font-medium leading-normal pb-2">Confirm Password</p>
 <div class="relative flex w-full flex-1 items-stretch">
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark focus:border-accent dark:focus:border-accent h-14 placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark p-[15px] pr-12 text-base font-normal leading-normal ring-0 focus:ring-2 focus:ring-accent/30" placeholder="Confirm your password" type="password" value=""/>
+<input name="password_confirmation" class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark focus:border-accent dark:focus:border-accent h-14 placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark p-[15px] pr-12 text-base font-normal leading-normal ring-0 focus:ring-2 focus:ring-accent/30" placeholder="Confirm your password" type="password" value=""/>
 <button aria-label="Toggle password visibility" class="text-text-muted-light dark:text-text-muted-dark absolute inset-y-0 right-0 flex items-center pr-4">
 <span class="material-symbols-outlined">visibility_off</span>
 </button>
 </div>
+@error('password_confirmation')
+<h2 class="text-sm md:text-base font-semibold capitalize text-red-600 pt-2">{{$message}}</h2>  
+@enderror
 </label>
 </div>
 </div>
 <div class="h-8"></div>
 <div class="flex w-full flex-col items-center gap-4 px-0 py-3">
-<button class="flex h-14 w-full items-center justify-center gap-2 whitespace-nowrap rounded-lg bg-primary px-5 py-3 text-base font-semibold leading-7 text-white shadow-sm transition-transform duration-200 ease-in-out hover:scale-[1.02] active:scale-[0.98]">
-                    Sign Up
-                </button>
-</div>
+<input type='submit' value="Sign Up" class="flex h-14 w-full items-center justify-center gap-2 whitespace-nowrap rounded-lg bg-primary px-5 py-3 text-base font-semibold leading-7 text-white shadow-sm transition-transform duration-200 ease-in-out hover:scale-[1.02] active:scale-[0.98]" />
+</div></form>
 <div class="flex items-center gap-4 py-4">
 <div class="h-px flex-1 bg-border-light dark:bg-border-dark"></div>
 <p class="text-text-muted-light dark:text-text-muted-dark text-sm">or sign up with</p>

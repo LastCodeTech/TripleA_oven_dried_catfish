@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head>
+<html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Triple A Oven-Dried Catfish</title>
+<title>Triple A Oven Dried Catfish - Home Page</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script>
       tailwind.config = {
         darkMode: "class",
         theme: {
           extend: {
             colors: {
-              "primary": "#d9a74a",
-              "background-light": "#f8f7f6",
-              "background-dark": "#201b12",
+              "primary": "#1a4c42", /* Deep Forest Green */
+              "secondary": "#daa520", /* Warm Gold */
+              "background-light": "#f6f8f7", /* Off-white */
+              "background-dark": "#141e1c", /* Dark mode background */
+              "accent": "#d2b48c", /* Light Wood Brown */
+              "text-light": "#101817",
+              "text-dark": "#eaf1ef",
+              "text-muted-light": "#5c8a81",
+              "text-muted-dark": "#a0b3b0"
             },
             fontFamily: {
-              "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+              "display": ["Playfair Display", "serif"],
+              "body": ["Inter", "sans-serif"]
             },
             borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
           },
@@ -28,9 +35,13 @@
       }
     </script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
     </style>
 <style>
     body {
@@ -38,120 +49,162 @@
     }
   </style>
   </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-[#1A1A1A] dark:text-white">
-<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
-<x-header></x-header>
-<!-- HeroSection -->
+<body class="bg-background-light dark:bg-background-dark font-body">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-10 flex items-center bg-background-light/80 dark:bg-background-dark/80 p-4 pb-2 justify-between backdrop-blur-sm">
+<div class="flex size-12 shrink-0 items-center justify-start text-text-light dark:text-text-dark">
+<span class="material-symbols-outlined text-3xl text-primary">eco</span>
+</div>
+<h2 class="font-display text-text-light dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Triple A Catfish</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent text-text-light dark:text-text-dark gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+<!-- Hero Section -->
 <div class="@container">
 <div class="@[480px]:p-4 p-0">
-<div class="flex min-h-[480px] flex-col items-center justify-center gap-6 bg-cover bg-center bg-no-repeat p-4 @[480px]:gap-8 @[480px]:rounded-lg" data-alt="Close-up of golden-brown oven-dried catfish" style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAJOcY7Sfv5MrAqyJagSE5O97wIWW_vnihxD2lG3K-l3IkiJP_K9a8OCFq6kA_oakVHMFPUZsW9cFITPRljxtjvK8di6evN8Wypdcx7Qk1y5bQwDdxei71NHnB_BA6vs8rCOwMtz4BhTpaoFCoSPy6EMnxikLgl6Oj8H5YyOij-LaWYZ43NkL58O1aGo74CbHr_TxVUC4T4Q0jeRZ_muYGMPS1sB8F0495sCWfZT5KZWifxhSUV-H6wee0asYhe46OZK7ATDOJyByXW");'>
-<div class="flex flex-col gap-2 text-center">
-<h1 class="text-4xl font-black leading-tight tracking-[-0.033em] text-white @[480px]:text-5xl">Triple A Oven-Dried Catfish — Pure Taste. Zero Sand.</h1>
-<h2 class="text-sm font-normal leading-normal text-white @[480px]:text-base">Premium hygienic oven-dried catfish delivered across Nigeria.</h2>
+<div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4 text-center" data-alt="High-quality, appetizing shot of oven-dried catfish on a dark slate background" style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAR4zvV5oY38I1vR92rpF-5BlGy55AtM_VCOTlofl_kvEFkKwKQBeMj3v1t2tBxjMAlXZTKQbccSx44M9RVFyxhIbl7FDoBoqiRyK5I9aA0eOc7TnIAo1xUnjlQ7PHn2AdMtXrx4Jd_zjICf6HG8o9ec127K0aDxEf9-nIUZiAkMzcepMMUV-6cPCc-2GfaTeiH-oRRyP__nnqx-OdQcbM1mZr7sl7cQIFxoZqyfIRwAzkm9mkJio4NT-nooovmRWPjfdQrFN_bnTY");'>
+<div class="flex flex-col gap-2">
+<h1 class="text-white font-display text-4xl font-black leading-tight tracking-tight @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight">
+                            Pure Taste. Zero Sand. 100% Hygienic.
+                        </h1>
+<h2 class="text-white/90 font-body text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                            Experience the premium difference with our perfectly prepared oven-dried catfish.
+                        </h2>
 </div>
-<div class="flex flex-wrap justify-center gap-3">
-<button class="flex h-10 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-4 text-sm font-bold leading-normal tracking-[0.015em] text-background-dark @[480px]:h-12 @[480px]:px-5 @[480px]:text-base">
-<span class="truncate">Order Now</span>
+<div class="flex-wrap gap-3 flex justify-center">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-primary text-white font-body text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]">
+<span class="truncate">Shop Now</span>
 </button>
-<button class="flex h-10 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg border border-primary/50 bg-primary/20 px-4 text-sm font-bold leading-normal tracking-[0.015em] text-white backdrop-blur-sm @[480px]:h-12 @[480px]:px-5 @[480px]:text-base">
-<span class="truncate">Wholesale Supply</span>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-background-light text-text-light font-body text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]">
+<span class="truncate">Become a Distributor</span>
 </button>
 </div>
 </div>
 </div>
 </div>
-<!-- SectionHeader for Products -->
-<h2 class="px-4 pb-3 pt-8 text-[22px] font-bold leading-tight tracking-[-0.015em]">Our Products</h2>
-<!-- ImageGrid for Products -->
-<div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4 pt-0">
-<div class="flex aspect-[3/4] flex-col justify-end gap-3 rounded-lg bg-cover bg-center p-4" data-alt="A whole oven-dried catfish, golden brown and perfectly preserved." style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBGYU8hRYPASMn6g4j4gEb3JJW7Fyf1DbXdrNaNtTPKwijhemfq3bRHLvjffZrOhXQmMDD12ckS_8NA9-pespJFWLXYj2VrWq6_MunYuo3taarZJMJxd9Hk_6a4wHnnGCRIWB9EB-gDER5DYO4VKfTNlO9GIQs71yl8DNsXjesNTmzzRzbGNak315VBXu2cwPt1vbD1vZ36So5MOrUv-u9OUBAoKCgITHCYizIExCWwBWbBv3O0r3jCXobT-wDHiQ1cr222oUbCf8bw");'>
-<p class="w-4/5 text-base font-bold leading-tight text-white line-clamp-3">Whole Fish</p>
+<!-- Bestsellers Section -->
+<h2 class="text-text-light dark:text-text-dark font-display text-3xl font-bold leading-tight px-4 pb-3 pt-8">Our Bestsellers</h2>
+<div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex items-stretch px-4 gap-4">
+<div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-white dark:bg-background-dark shadow-[0_2px_8px_rgba(0,0,0,0.05)] dark:border dark:border-white/10 min-w-60">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-t-xl flex flex-col" data-alt="Packaging for 250g oven-dried catfish" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDXR35XIIgUju_RXPDFhwUsMvhqlGmu13sjpG9jMu6N6GzTSxz4DLGYT5gZiMmIF0PYeqQFL9tLeEKeiCo9kRfXPi3lczSnW0QCcLG_rxZnkIMHJf7VMl9ASabTCEd2RGgZH7rWHC5crJzCwEONcCRxED83YLsl-wMLALpp8uoOw15KD9F3w6H2EBS_OUOOFxZJ7_IoYbMi9cqz4gMlhRcGemmAKa5qVZxlG70sLhYAHBnvC86KlLp-Pli1N8va94MdPwpiZvlMXXA");'></div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-text-light dark:text-text-dark font-body text-base font-medium leading-normal">Triple A Catfish - 250g</p>
+<p class="text-text-muted-light dark:text-text-muted-dark font-body text-sm font-normal leading-normal">$15.00</p>
 </div>
-<div class="flex aspect-[3/4] flex-col justify-end gap-3 rounded-lg bg-cover bg-center p-4" data-alt="Flaky and delicious oven-dried catfish fillets, ready to cook." style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCXWwKOHA08lk4Sk7lMBWWKepMx-Mf6nAHkR-yvai6WhlAAt4o37vIco2EUrq6abefUIhkZOcK9epcuc8WYPC6fR-8pbl0il9orQ1cVZOGe9FAuWAu-_EohcOROLCv4QnQOLYCoPChQbm5Chhe-2OyIBIBjuqPGhrFNLOu-GtuNlwO8wCzy3Z_RTwefgfq4k1A7JUzO3rGWWiFPsJSGoAZglhDiByjn9gbs9IMHQZf9VhyrjOpwB6jsk0qc1xojVskJFv10fEBGdYU4");'>
-<p class="w-4/5 text-base font-bold leading-tight text-white line-clamp-3">Fillets</p>
-</div>
-<div class="flex aspect-[3/4] flex-col justify-end gap-3 rounded-lg bg-cover bg-center p-4" data-alt="Catfish pieces seasoned with a blend of aromatic spices, ready for drying." style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAeelTFL1yywcKiYntha4PSy-kPXyFuuVGtHPvpWHlbZuQ4quEgZUlUkVoP3tIzASx1ckejLSthzJoBI6vuEtOb-wczjfpsU1yMTxDA0xna1r06hmChyAhYc4rp89O9-yOZfiJKaTJP62Od--IVXv3zW8TfVt4i-VfdqIOMyMIrnT7pgGJHDD0p207ZJHdXatlUJAj-Tdk6GkXd-nSJEPQ_lUI_xiEoz1fr_GLE-UQT9AEqyt5WsZuDlXerKM9QQEUdXN24rgtcL8K8");'>
-<p class="w-4/5 text-base font-bold leading-tight text-white line-clamp-3">Spiced</p>
-</div>
-</div>
-<!-- FeatureSection -->
-<div class="flex flex-col gap-10 bg-background-light px-4 py-10 dark:bg-background-dark @container">
-<div class="flex flex-col gap-4">
-<h1 class="max-w-[720px] text-[32px] font-bold leading-tight tracking-light @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">Why Choose Us?</h1>
-<p class="max-w-[720px] text-base font-normal leading-normal text-gray-600 dark:text-gray-300">We are committed to delivering the highest quality oven-dried catfish with an emphasis on hygiene and flavor.</p>
-</div>
-<div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-0">
-<div class="flex flex-1 flex-col gap-3 rounded-lg border border-primary/20 bg-primary/10 p-4 dark:border-primary/30 dark:bg-[#30291c]">
-<span class="material-symbols-outlined text-primary">health_and_safety</span>
-<div class="flex flex-col gap-1">
-<h2 class="text-base font-bold leading-tight">Hygienic Process</h2>
-<p class="text-sm font-normal leading-normal text-gray-600 dark:text-[#c3b498]">Processed in a state-of-the-art, clean facility.</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/10 dark:bg-white/10 text-primary dark:text-secondary font-body text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Add to Cart</span>
+</button>
 </div>
 </div>
-<div class="flex flex-1 flex-col gap-3 rounded-lg border border-primary/20 bg-primary/10 p-4 dark:border-primary/30 dark:bg-[#30291c]">
-<span class="material-symbols-outlined text-primary">spark</span>
-<div class="flex flex-col gap-1">
-<h2 class="text-base font-bold leading-tight">Sand-Free Guarantee</h2>
-<p class="text-sm font-normal leading-normal text-gray-600 dark:text-[#c3b498]">Our unique process ensures a completely sand-free product.</p>
+<div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-white dark:bg-background-dark shadow-[0_2px_8px_rgba(0,0,0,0.05)] dark:border dark:border-white/10 min-w-60">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-t-xl flex flex-col" data-alt="Packaging for 500g oven-dried catfish" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAK8OU-ojbGzblHrtkw-tgsYl3er9-2VhDhMmjrlNoaTe6OUe3Ha0N8hZ3R2yxoPwBDewgW-zshP_AzFB2FD_iYKuzygEeqbuwwlLqAgqca7LDFCjkNdkA8h8sX7wU8ZHHDmk9jKgSlapraVtV6uyRVH_JHVauE5As-cOUff4QMfk_2SqH5Dc3IkhLeZoLxIpEkgqVXpXYB776uD2Sgc5cc3lWxCsbvS4GcH7Wfha_XTTbiw8UpqgzRH32hMz6qxmeYCGBR6kYxsEE");'></div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-text-light dark:text-text-dark font-body text-base font-medium leading-normal">Triple A Catfish - 500g</p>
+<p class="text-text-muted-light dark:text-text-muted-dark font-body text-sm font-normal leading-normal">$28.00</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/10 dark:bg-white/10 text-primary dark:text-secondary font-body text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Add to Cart</span>
+</button>
 </div>
 </div>
-<div class="flex flex-1 flex-col gap-3 rounded-lg border border-primary/20 bg-primary/10 p-4 dark:border-primary/30 dark:bg-[#30291c]">
-<span class="material-symbols-outlined text-primary">local_shipping</span>
-<div class="flex flex-col gap-1">
-<h2 class="text-base font-bold leading-tight">Nationwide Delivery</h2>
-<p class="text-sm font-normal leading-normal text-gray-600 dark:text-[#c3b498]">We deliver fresh to your doorstep, anywhere in Nigeria.</p>
+<div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-white dark:bg-background-dark shadow-[0_2px_8px_rgba(0,0,0,0.05)] dark:border dark:border-white/10 min-w-60">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-t-xl flex flex-col" data-alt="Packaging for 1kg oven-dried catfish" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDg9cFcsQliqjngeo7Opg5StrSCZQ92caiyGzhFUDa-lwiPpPYwY9PDIdbvJO1YvNVJgwGXmaZnPwWU39RTPrTUEUGMHR2KvqDvu2obBA4oZwj4P5eP-Pao7GgfRyc9-q6AZcB2aT5FnFmbXd7qOTewQy8nYQ7IGAxpSNiKYtGgeRJv3MnE7WbuUU28Nk7TaGHj_oYv7gpmp6py-3FhDeccxG55opHv1zNYlGPerrF20VJyI1SwwysYB8E0VZDW6mQ7bx_jmdj_ibk");'></div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-text-light dark:text-text-dark font-body text-base font-medium leading-normal">Triple A Catfish - 1kg</p>
+<p class="text-text-muted-light dark:text-text-muted-dark font-body text-sm font-normal leading-normal">$50.00</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/10 dark:bg-white/10 text-primary dark:text-secondary font-body text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Add to Cart</span>
+</button>
 </div>
 </div>
-<div class="flex flex-1 flex-col gap-3 rounded-lg border border-primary/20 bg-primary/10 p-4 dark:border-primary/30 dark:bg-[#30291c]">
-<span class="material-symbols-outlined text-primary">restaurant</span>
-<div class="flex flex-col gap-1">
-<h2 class="text-base font-bold leading-tight">Rich Flavor</h2>
-<p class="text-sm font-normal leading-normal text-gray-600 dark:text-[#c3b498]">Smoked to perfection for a deep, authentic taste.</p>
+</div>
+</div>
+<!-- Why Choose Us Section -->
+<div class="p-4 mt-8">
+<h2 class="text-text-light dark:text-text-dark font-display text-3xl font-bold leading-tight text-center mb-6">The Triple A Difference</h2>
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-4">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-secondary/20 dark:text-secondary">
+<span class="material-symbols-outlined">health_and_safety</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-body text-base font-bold text-text-light dark:text-text-dark">100% Hygienic</h3>
+<p class="font-body text-sm text-text-muted-light dark:text-text-muted-dark">Prepared in a spotless, certified facility.</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-secondary/20 dark:text-secondary">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-body text-base font-bold text-text-light dark:text-text-dark">Sand-Free Guarantee</h3>
+<p class="font-body text-sm text-text-muted-light dark:text-text-muted-dark">Enjoy a pure, grit-free taste every time.</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-secondary/20 dark:text-secondary">
+<span class="material-symbols-outlined">workspace_premium</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-body text-base font-bold text-text-light dark:text-text-dark">Premium Quality</h3>
+<p class="font-body text-sm text-text-muted-light dark:text-text-muted-dark">Only the best, hand-selected catfish make the cut.</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-secondary/20 dark:text-secondary">
+<span class="material-symbols-outlined">eco</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-body text-base font-bold text-text-light dark:text-text-dark">Fresh From the Farm</h3>
+<p class="font-body text-sm text-text-muted-light dark:text-text-muted-dark">Sustainably sourced for unbeatable freshness.</p>
 </div>
 </div>
 </div>
 </div>
 <!-- Testimonials Section -->
-<div class="flex flex-col gap-4 px-4 py-10">
-<h2 class="text-[22px] font-bold leading-tight tracking-[-0.015em]">What Our Customers Say</h2>
-<div class="relative w-full overflow-hidden">
-<div class="flex snap-x snap-mandatory overflow-x-auto pb-4 scrollbar-hide">
-<div class="flex w-full flex-shrink-0 snap-center flex-col gap-4 rounded-lg border border-primary/20 bg-primary/10 p-6 dark:border-primary/30 dark:bg-[#30291c] md:w-1/2">
-<p class="italic text-gray-700 dark:text-gray-300">"The taste is just incredible! Absolutely no sand, and it's so easy to cook with. Triple A is now a staple in my kitchen."</p>
-<p class="font-bold">- Adeola, Lagos</p>
+<h2 class="text-text-light dark:text-text-dark font-display text-3xl font-bold leading-tight px-4 pb-3 pt-8">What Our Customers Say</h2>
+<div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex items-stretch p-4 gap-4">
+<div class="flex h-full min-w-[280px] flex-1 flex-col gap-4 rounded-xl bg-accent/20 dark:bg-accent/10 p-5">
+<div class="flex gap-1 text-secondary">
+<span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
 </div>
+<p class="text-text-light dark:text-text-dark font-body text-base font-normal leading-relaxed">"The best dried catfish I've ever had. No sand, just pure flavor. It made my soup taste incredible!"</p>
+<p class="text-text-muted-light dark:text-text-muted-dark font-body text-sm font-medium">— Funke A.</p>
 </div>
+<div class="flex h-full min-w-[280px] flex-1 flex-col gap-4 rounded-xl bg-accent/20 dark:bg-accent/10 p-5">
+<div class="flex gap-1 text-secondary">
+<span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
 </div>
+<p class="text-text-light dark:text-text-dark font-body text-base font-normal leading-relaxed">"I'm so impressed with the quality and hygiene. You can tell this is a premium product. Will definitely buy again."</p>
+<p class="text-text-muted-light dark:text-text-muted-dark font-body text-sm font-medium">— Emeka O.</p>
 </div>
-<!-- Newsletter Section -->
-<div class="bg-primary/20 dark:bg-primary/10 p-8 m-4 rounded-lg flex flex-col items-center text-center gap-4">
-<h3 class="text-xl font-bold">Join Our Newsletter</h3>
-<p class="text-gray-600 dark:text-gray-300">Get exclusive offers and updates delivered straight to your inbox.</p>
-<div class="flex w-full max-w-sm flex-col gap-2 sm:flex-row">
-<input class="w-full rounded-lg border-gray-300 bg-background-light px-4 py-2 text-background-dark shadow-sm focus:border-primary focus:ring-primary dark:border-primary/30 dark:bg-background-dark dark:text-white" placeholder="Enter your email" type="email"/>
-<button class="flex shrink-0 items-center justify-center rounded-lg bg-primary px-5 py-2.5 font-bold text-background-dark">Subscribe</button>
 </div>
 </div>
 <!-- Footer -->
-<footer class="bg-gray-100 dark:bg-gray-900 mt-10 p-8">
-<div class="flex flex-col gap-8">
-<div class="flex flex-col items-center gap-2 text-center">
-<h4 class="text-lg font-bold">Triple A Oven-Dried Catfish</h4>
-<p class="text-sm text-gray-600 dark:text-gray-400">Pure Taste. Zero Sand.</p>
-</div>
+<div class="bg-primary/90 dark:bg-black/20 mt-12 p-8 text-center text-white">
+<div class="flex flex-col gap-6">
 <div class="flex justify-center gap-6">
-<a class="text-gray-600 dark:text-gray-400 hover:text-primary" href="#">Facebook</a>
-<a class="text-gray-600 dark:text-gray-400 hover:text-primary" href="#">Instagram</a>
-<a class="text-gray-600 dark:text-gray-400 hover:text-primary" href="#">Twitter</a>
+<a class="font-body text-sm" href="#">FAQ</a>
+<a class="font-body text-sm" href="#">Shipping</a>
+<a class="font-body text-sm" href="#">Contact Us</a>
 </div>
-<div class="flex flex-col items-center gap-1 text-center text-sm text-gray-600 dark:text-gray-400">
-<p>contact@tripleafish.com</p>
-<p>+234 800 123 4567</p>
+<div class="flex justify-center gap-4">
+<img alt="Instagram logo" class="h-6 w-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD_6ZNJz8i9AX1L2k0Hep0VnVo_K3h0EINBIM-sYrjYq7wR96UBVDTnhZkVOov12iRUb4AVflB0noleV1NjY4bsxM08W43mD_mT_COj6ig9n6qp4zjmjp0I3hmAq9yP6MTeAsuBq3mua8pL-UaRPJ8DV8kEKNITjiaCExaTLMFxsd4HH5KGaETyFuHH3OQRSvNPis8VdBgtGoRBsRHFcvhTtSInBkKBdsdVCzNOQ4F0LboQYPzAx8K8dpoMhdC_4dQspWmOnqRDJY"/>
+<img alt="Facebook logo" class="h-6 w-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmNg0BZvqxwY1pxbOEbplStlJAWjZklKCNJyRM3omSB4aKF_H3lmQjmwNmYrf2howf2cRH19W6nT-2i-XMR4XDqjVlx_uQn8hOb4TlGyXhk17K3SA_GkwaixNlNj7pIDXE2nOEPotmM60j1iqngGhVyL1HxybZKXyU52IAZo4vY7RIY1Xw_CwprJcXLNka0krXehTWT0tgD2Vk4RZig_dHavbwDwcufc87j6B5XCivbSgLUla9W26vM51e-3m2VepC1PNTvqgZlyM"/>
+<img alt="X logo" class="h-6 w-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8Jebn9m-86WfMBW16zl1KLO0XEUVe4dBWo8SOFDngNsyQ50BWLKyoXe0D_9NL_9ljCx9JnsVVwscIqyINhWBPnTzAjks3XXNSuxRIelnQ_u_CwOB93RJV-4S8It_m9q25R87FxGn_3DFzKWDpeVZ_ibpC6QSxz8JjrDsh_37zfzCxG9Fkolxlro4C4s-5c9dB9r76YatfKM68CZ_UOTBQu_sVCfxaqZlps9neNr8WmdlWyAHy3IJ5dIXx9ARhOiHjET5Idksv284"/>
 </div>
-<div class="border-t border-gray-200 dark:border-gray-800 pt-6 text-center text-xs text-gray-500">
-<p>© 2024 Triple A Foods. All Rights Reserved.</p>
+<p class="text-white/70 font-body text-xs">© 2024 Triple A Catfish. All Rights Reserved.</p>
 </div>
 </div>
-</footer>
 </div>
 </body></html>

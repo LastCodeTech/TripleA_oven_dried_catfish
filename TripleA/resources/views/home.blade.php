@@ -71,9 +71,16 @@
                         </h2>
 </div>
 <div class="flex-wrap gap-3 flex justify-center">
+@auth
 <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-primary text-white font-body text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]">
 <span class="truncate"><a href="{{route('shop')}}">Shop Now</a></span>
 </button>
+@endauth
+@guest
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-primary text-white font-body text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]">
+<span class="truncate"><a href="{{route('login')}}">Shop Now</a></span>
+</button>
+@endguest
 
 </div>
 </div>

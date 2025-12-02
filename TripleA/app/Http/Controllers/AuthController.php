@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Notifications\Newnotification;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -24,6 +25,7 @@ class AuthController extends Controller
         ]);
 
         $create=User::create($validate);
+        $create->notify(new Newnotification(''));
         if($create){
             return redirect()->route('home')->with('message','your account has been successfully created');
         }
@@ -38,7 +40,8 @@ public function loginProcess(Request $request){
         'password'=>'required',
     ]);
     
-    $login=Auth::attem($validate);
+    $login=Auth::attempt($validate);
+    $request->session()->regenerate();
     if($login){
             return redirect()->route('home')->with('message','your have successfully log in');
         }
@@ -46,6 +49,13 @@ public function loginProcess(Request $request){
              return redirect()->route('login')->with('message','email or password is incorrect');
         }
 
+}
+
+public function logoutProcess(Request $request){
+Auth::logout();
+$request->session()->invalidate();
+$request->session()->regenerateToken();
+return redirect()->route('login');
 }
 
 }

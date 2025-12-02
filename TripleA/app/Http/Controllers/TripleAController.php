@@ -27,7 +27,7 @@ class TripleAController extends Controller
     public function cart(){
         return view('cart');
     }
-    public function user(){
-        return view('user');
+    public function dashboard(){
+        return view('dashboard');
     }
 }

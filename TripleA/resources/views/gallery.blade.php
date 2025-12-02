@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Triple A Oven-Dried Catfish - Gallery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Montserrat:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    @media (min-width: 400px) {
+        .gallery-grid {
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        }
+    }
+  </style>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#D4AF37",
+            "deep-brown": "#4A2E2A",
+            "cream-white": "#F5F5DC",
+            "rich-black": "#1A1A1A",
+            "background-light": "#F5F5DC",
+            "background-dark": "#1A1A1A",
+          },
+          fontFamily: {
+            "display": ["Montserrat", "sans-serif"],
+            "serif": ["Playfair Display", "serif"]
+          },
+          borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-deep-brown dark:text-cream-white">
+<div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark">
+<div class="fixed inset-0 z-50 flex hidden items-center justify-center bg-rich-black/90 backdrop-blur-sm" id="lightbox" onclick="this.classList.add('hidden')">
+<div class="relative flex h-full w-full flex-col items-center justify-center p-4">
+<button class="absolute top-4 right-4 z-50 flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white transition-colors hover:bg-white/30">
+<span class="material-symbols-outlined text-2xl">close</span>
+</button>
+<img alt="Enlarged gallery image" class="max-h-[80vh] max-w-[90vw] rounded-lg object-contain shadow-2xl" id="lightbox-img" src=""/>
+</div>
+</div>
+<header class="sticky top-0 z-40 flex items-center justify-between bg-cream-white/80 p-4 pb-3 dark:bg-rich-black/80 backdrop-blur-sm">
+<button class="flex size-10 items-center justify-center text-deep-brown dark:text-cream-white">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+<h1 class="font-serif text-xl font-bold leading-tight tracking-tight text-deep-brown dark:text-cream-white">Our Gallery</h1>
+<button class="flex size-10 items-center justify-center text-deep-brown dark:text-cream-white">
+<span class="material-symbols-outlined text-2xl">shopping_bag</span>
+</button>
+</header>
+<main class="flex-1 px-4 py-6">
+<div class="text-center">
+<h2 class="font-serif text-3xl font-bold leading-tight tracking-tight text-deep-brown dark:text-cream-white">A Glimpse Into Our Process</h2>
+<p class="pt-2 text-base font-normal leading-normal text-deep-brown/90 dark:text-cream-white/80">From fresh catch to perfectly dried, see the care we put into every batch.</p>
+</div>
+<div class="gallery-grid grid gap-3 pt-8 sm:gap-4">
+<div class="group relative cursor-pointer overflow-hidden rounded-lg shadow-md transition-shadow hover:shadow-xl" onclick="openLightbox('image-3715e4905d2149e38d4f40445d3129f1', 'Catfish drying in a modern, clean oven')">
+<img alt="Catfish drying in a modern, clean oven" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8gRQon-Q03apLOfXFadGUZfTaK3X4_nM6EMjwrYOIok6bh_Szc7yTgV6NimDhT087EIQuwSlOBQziTS9cLQFY1FneOW7FFz1eM7PplvLlgtMi4Z5509xwR7g11gikwKEJDEBpmKYPyqlHi5cxRl0H-z4Vd83taWSg55YKoOgue5htaG4OmgA-rtiTq5Pg0BxDAYLa3vyegaIy3H307JlTrlaXOC_l-5tNrWljpJTtMjuGnJV48upZYlu-IxnECXzCwYkMn3iQKOEb"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-3">
+<p class="text-sm font-semibold text-white">The Drying Process</p>
+</div>
+</div>
+<div class="group relative col-span-2 cursor-pointer overflow-hidden rounded-lg shadow-md transition-shadow hover:shadow-xl" onclick="openLightbox('https://lh3.googleusercontent.com/aida-public/AB6AXuBqd3lzn1L_Qh6xMEeJYToHeCT2MlGBvcntbu9TBpa8rbLi408FSQ0XOive-9jqyvp417VyB_KUX3usjuoYe4SKZOP5xWvaOHbw1jGcni41OdbMn69hvE8cAHTTTt1rIDdhQYKE8ysyPdeiONlQejJ0YWKM2hCVwe8thf4lMUiECTl84K4lL6agf1iPPhU9NM7Sv0ZwY9UGAX_lag8fcVaYrS8sLzY1SWRqInlw2qz5IppwZrnaFa-9yP3pK4MUHpS0mAzyRxm3_Sqk', 'Close-up of a perfectly smoked and spiced oven-dried catfish, ready for packaging')">
+<img alt="Close-up of a perfectly smoked and spiced oven-dried catfish, ready for packaging" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqd3lzn1L_Qh6xMEeJYToHeCT2MlGBvcntbu9TBpa8rbLi408FSQ0XOive-9jqyvp417VyB_KUX3usjuoYe4SKZOP5xWvaOHbw1jGcni41OdbMn69hvE8cAHTTTt1rIDdhQYKE8ysyPdeiONlQejJ0YWKM2hCVwe8thf4lMUiECTl84K4lL6agf1iPPhU9NM7Sv0ZwY9UGAX_lag8fcVaYrS8sLzY1SWRqInlw2qz5IppwZrnaFa-9yP3pK4MUHpS0mAzyRxm3_Sqk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-3">
+<p class="text-sm font-semibold text-white">Packaged &amp; Ready</p>
+</div>
+</div>
+<div class="group relative cursor-pointer overflow-hidden rounded-lg shadow-md transition-shadow hover:shadow-xl" onclick="openLightbox('image-4c6e919b5d384ac980907e2a96a583e7', 'Fresh, raw catfish prepared for the oven')">
+<img alt="Fresh, raw catfish prepared for the oven" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcORxpj3wjYs4_DpvotudSuvNqt7C_W3cz4aMEtak5ouD7eVu-v5ya-oAQUQ2PzeZACmtVdEQwEAoRD0rXnXa-G3y07tM5ie8UnUAmk71sTsX5muLcTfzNosHrN4EOw9dWlrkXCGZnLRH6QTNTJRNardw7Kd9qBNwJvBzhH0jdiBM_nkUjHkIVMdvxeTyZGr0Hy2kH_5VYop3892D_ca11SfhbuX9_TXdJ1mmSAzJ5hQUEaDHkgzSrJYerZ7A7MWw-CKDBzia5SDGg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-3">
+<p class="text-sm font-semibold text-white">Before Processing</p>
+</div>
+</div>
+<div class="group relative cursor-pointer overflow-hidden rounded-lg shadow-md transition-shadow hover:shadow-xl" onclick="openLightbox('image-7848c7d3a0424564b73b22b7245749f7', 'State-of-the-art oven used for drying catfish')">
+<img alt="State-of-the-art oven used for drying catfish" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5GRTooh2Xwt6Llox8BxEJ0YOj0pCb1V5oNLqcl5yssawtZ9b-Isk980HXcK2imyLStd5kE2Gz-890JyhDcbZR7m93MppFMK-T9DgjYUZl8WmgEIo2IwyZW0tVevIkSKAOJ9RO6icD9r1Q2M7gvnzZToauLjjMCwWUr7cAm2QpLlYqzQ7MW-aZszQIfcRpbq1frMD_nBsGAoWDSh-EENeYw9FyR9zKj2-dAL_d8-2Cs-JtXwKLK4RnhuR5jQXhkZ3Td6sQM0e8VS3S"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-3">
+<p class="text-sm font-semibold text-white">Our Oven</p>
+</div>
+</div>
+<div class="group relative col-span-2 cursor-pointer overflow-hidden rounded-lg shadow-md transition-shadow hover:shadow-xl" onclick="openLightbox('image-9f237191147047f3b33454743b006cf0', 'Large bulk order of packaged oven-dried catfish')">
+<img alt="Large bulk order of packaged oven-dried catfish" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBriTa7f8vcfQWWmhL2rTvoWbNi_MFw5ZbBVafhmweXHGJhO57eS58CYK7BqVbR0KVLs5m7oHKv6PjiVMySQrR4kW7joHx2kEVc8STyyfQPmx9uUD1FQbsmhQR-tIRI7l-zQc0wYeML0JRE7agafKFrKVLBrXdZINv1sWl6FImFbNmMXaN1Hu6_MD-tB5KcDZNhg8P3PSm_I82CLcnBWIsDZCeOAghE8MIqh4Ub0ZvMamPleolx6dPgfn_MkKd6VwzXUzLthUAjSAWu"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-3">
+<p class="text-sm font-semibold text-white">Bulk Orders</p>
+</div>
+</div>
+<div class="group relative col-span-2 cursor-pointer overflow-hidden rounded-lg shadow-md transition-shadow hover:shadow-xl" onclick="openLightbox('https://lh3.googleusercontent.com/aida-public/AB6AXuDrHYZjDGNQrBNneb8q2K-ucB8uql81qZQiDU9gX3vqfSlvL507k-uDSUaawY9InzWud9G6lE5uOLmxsUWeGd1DUBrv2yVrfB4x6kz5l0owIOViIVipyarxSS8lCYv_9__bsgTO6tN0dq7qIRq-Cjznu-ypuS0dtzZhlvi0icRWPd2nugkpssisjo_dA0mqToS4LkqnC3lVg7yLSiC4G6q986ifz3SiQf9dLLIX4VFf12XnVo1PAWNUGU_lIZvkNMD1lOqDzyciIp8V', 'Beautifully golden-brown oven-dried catfish after processing')">
+<img alt="Beautifully golden-brown oven-dried catfish after processing" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrHYZjDGNQrBNneb8q2K-ucB8uql81qZQiDU9gX3vqfSlvL507k-uDSUaawY9InzWud9G6lE5uOLmxsUWeGd1DUBrv2yVrfB4x6kz5l0owIOViIVipyarxSS8lCYv_9__bsgTO6tN0dq7qIRq-Cjznu-ypuS0dtzZhlvi0icRWPd2nugkpssisjo_dA0mqToS4LkqnC3lVg7yLSiC4G6q986ifz3SiQf9dLLIX4VFf12XnVo1PAWNUGU_lIZvkNMD1lOqDzyciIp8V"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-3">
+<p class="text-sm font-semibold text-white">After Processing</p>
+</div>
+</div>
+</div>
+</main>
+</div>
+<script>
+  function openLightbox(src, alt) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox-img').alt = alt;
+    document.getElementById('lightbox').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+  document.getElementById('lightbox').addEventListener('click', function() {
+    this.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+  });
+</script>
+
+</body></html>

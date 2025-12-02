@@ -10,3 +10,4 @@ Route::post('/loginProcess',[AuthController::class,'loginProcess'])->name('login
 Route::get('/',[TripleAController::class,'home'])->name('home');
 Route::get('/shop',[TripleAController::class,'shop'])->name('shop');
 Route::get('/about',[TripleAController::class,'about'])->name('about');
+Route::get('/gallery',[TripleAController::class,'gallery'])->name('gallery');

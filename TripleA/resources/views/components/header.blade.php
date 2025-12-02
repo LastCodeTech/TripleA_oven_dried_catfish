@@ -12,6 +12,7 @@
                 <li><a href="{{route('home')}}" class="text-lg font-medium text-slate-700 hover:text-red-600">Home</a></li>
                 <li><a href='{{route('shop')}}' class="text-lg font-medium text-slate-700 hover:text-red-600">Shop</a></li>
                 <li><a href="{{route('about')}}" class="text-lg font-medium text-slate-700 hover:text-red-600">About</a></li>
+                <li><a href="{{route('gallery')}}" class="text-lg font-medium text-slate-700 hover:text-red-600">gallery</a></li>
                 <li><a href="#" class="text-lg font-medium text-slate-700 hover:text-red-600">Blog</a></li>
             </ul>
         </nav>
@@ -40,6 +41,7 @@
             <li><a href='{{route('home')}}' class="text-lg text-slate-700 hover:text-red-600">Home</a></li>
             <li><a href='{{route('shop')}}' class="text-lg text-slate-700 hover:text-red-600">Shop</a></li>
             <li><a href="{{route('about')}}" class="text-lg text-slate-700 hover:text-red-600">About</a></li>
+            <li><a href="{{route('gallery')}}" class="text-lg text-slate-700 hover:text-red-600">Gallery</a></li>
             <li><a href="#" class="text-lg text-slate-700 hover:text-red-600">Blog</a></li>
         </ul>
     </nav>

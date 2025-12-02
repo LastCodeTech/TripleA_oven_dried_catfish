@@ -11,3 +11,4 @@ Route::get('/',[TripleAController::class,'home'])->name('home');
 Route::get('/shop',[TripleAController::class,'shop'])->name('shop');
 Route::get('/about',[TripleAController::class,'about'])->name('about');
 Route::get('/gallery',[TripleAController::class,'gallery'])->name('gallery');
+Route::get('/blog',[TripleAController::class,'blog'])->name('blog');

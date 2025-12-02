@@ -18,4 +18,7 @@ class TripleAController extends Controller
     public function gallery(){
         return view('gallery');
     }
+    public function blog(){
+        return view('blog');
+    }
 }

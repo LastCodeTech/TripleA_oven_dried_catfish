@@ -12,4 +12,7 @@ class TripleAController extends Controller
     public function shop(){
         return view('shop');
     }
+    public function about(){
+        return view('about');
+    }
 }

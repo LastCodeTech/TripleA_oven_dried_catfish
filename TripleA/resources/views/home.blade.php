@@ -5,6 +5,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Triple A Oven Dried Catfish - Home Page</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="https://kit.fontawesome.com/39c5fdd9a0.js" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
@@ -50,19 +51,13 @@
   </style>
   </head>
 <body class="bg-background-light dark:bg-background-dark font-body">
+  <x-header />
 <div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
 <!-- Top App Bar -->
-<div class="sticky top-0 z-10 flex items-center bg-background-light/80 dark:bg-background-dark/80 p-4 pb-2 justify-between backdrop-blur-sm">
-<div class="flex size-12 shrink-0 items-center justify-start text-text-light dark:text-text-dark">
-<span class="material-symbols-outlined text-3xl text-primary">eco</span>
-</div>
-<h2 class="font-display text-text-light dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Triple A Catfish</h2>
-<div class="flex w-12 items-center justify-end">
-<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent text-text-light dark:text-text-dark gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
-<span class="material-symbols-outlined text-3xl">menu</span>
-</button>
-</div>
-</div>
+
+@if (session()->has('message'))
+    <h2 class="text-base md:xl font-semibold capitalize text-red-600 pt-2">{{session('message')}}</h2>
+@endif
 <!-- Hero Section -->
 <div class="@container">
 <div class="@[480px]:p-4 p-0">
@@ -77,18 +72,16 @@
 </div>
 <div class="flex-wrap gap-3 flex justify-center">
 <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-primary text-white font-body text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]">
-<span class="truncate">Shop Now</span>
+<span class="truncate"><a href="{{route('shop')}}">Shop Now</a></span>
 </button>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-background-light text-text-light font-body text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]">
-<span class="truncate">Become a Distributor</span>
-</button>
+
 </div>
 </div>
 </div>
 </div>
 <!-- Bestsellers Section -->
-<h2 class="text-text-light dark:text-text-dark font-display text-3xl font-bold leading-tight px-4 pb-3 pt-8">Our Bestsellers</h2>
-<div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<h2 class="text-text-light dark:text-text-dark font-display text-3xl font-bold leading-tight px-4 pb-3 pt-8 md:text-center md:py-3">Our Bestsellers</h2>
+<div class="flex  md:justify-evenly overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
 <div class="flex items-stretch px-4 gap-4">
 <div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-white dark:bg-background-dark shadow-[0_2px_8px_rgba(0,0,0,0.05)] dark:border dark:border-white/10 min-w-60">
 <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-t-xl flex flex-col" data-alt="Packaging for 250g oven-dried catfish" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDXR35XIIgUju_RXPDFhwUsMvhqlGmu13sjpG9jMu6N6GzTSxz4DLGYT5gZiMmIF0PYeqQFL9tLeEKeiCo9kRfXPi3lczSnW0QCcLG_rxZnkIMHJf7VMl9ASabTCEd2RGgZH7rWHC5crJzCwEONcCRxED83YLsl-wMLALpp8uoOw15KD9F3w6H2EBS_OUOOFxZJ7_IoYbMi9cqz4gMlhRcGemmAKa5qVZxlG70sLhYAHBnvC86KlLp-Pli1N8va94MdPwpiZvlMXXA");'></div>
@@ -129,10 +122,10 @@
 </div>
 </div>
 <!-- Why Choose Us Section -->
-<div class="p-4 mt-8">
-<h2 class="text-text-light dark:text-text-dark font-display text-3xl font-bold leading-tight text-center mb-6">The Triple A Difference</h2>
-<div class="flex flex-col gap-6">
-<div class="flex items-center gap-4">
+<div class="p-4   mt-8">
+<h2 class="text-center text-text-light dark:text-text-dark font-display text-3xl font-bold leading-tight text-center mb-6">The Triple A Difference</h2>
+<div><div class="md:grid md:grid-cols-2  flex   flex-col gap-6">
+<div class="md:border-4 md:border-slate-700 md:bg-slate-200 md:py-7 md:px-8 md:rounded-xl flex items-center gap-4">
 <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-secondary/20 dark:text-secondary">
 <span class="material-symbols-outlined">health_and_safety</span>
 </div>
@@ -141,8 +134,8 @@
 <p class="font-body text-sm text-text-muted-light dark:text-text-muted-dark">Prepared in a spotless, certified facility.</p>
 </div>
 </div>
-<div class="flex items-center gap-4">
-<div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-secondary/20 dark:text-secondary">
+<div class="md:border-4 md:border-slate-700 md:bg-slate-200 md:py-7 md:px-8 md:rounded-xl flex items-center gap-4">
+<div class=" flex size-12 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-secondary/20 dark:text-secondary">
 <span class="material-symbols-outlined">verified</span>
 </div>
 <div class="flex flex-col">
@@ -150,7 +143,7 @@
 <p class="font-body text-sm text-text-muted-light dark:text-text-muted-dark">Enjoy a pure, grit-free taste every time.</p>
 </div>
 </div>
-<div class="flex items-center gap-4">
+<div class="md:border-4 md:border-slate-700 md:bg-slate-200 md:py-7 md:px-8 md:rounded-xl flex items-center gap-4">
 <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-secondary/20 dark:text-secondary">
 <span class="material-symbols-outlined">workspace_premium</span>
 </div>
@@ -159,7 +152,7 @@
 <p class="font-body text-sm text-text-muted-light dark:text-text-muted-dark">Only the best, hand-selected catfish make the cut.</p>
 </div>
 </div>
-<div class="flex items-center gap-4">
+<div class="md:border-4 md:border-slate-700 md:bg-slate-200 md:py-7 md:px-8 md:rounded-xl flex items-center gap-4">
 <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-secondary/20 dark:text-secondary">
 <span class="material-symbols-outlined">eco</span>
 </div>
@@ -168,10 +161,10 @@
 <p class="font-body text-sm text-text-muted-light dark:text-text-muted-dark">Sustainably sourced for unbeatable freshness.</p>
 </div>
 </div>
-</div>
+</div></div>
 </div>
 <!-- Testimonials Section -->
-<h2 class="text-text-light dark:text-text-dark font-display text-3xl font-bold leading-tight px-4 pb-3 pt-8">What Our Customers Say</h2>
+<h2 class="text-text-light dark:text-text-dark font-display text-3xl font-bold leading-tight px-4 pb-3 pt-8 text-center">What Our Customers Say</h2>
 <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
 <div class="flex items-stretch p-4 gap-4">
 <div class="flex h-full min-w-[280px] flex-1 flex-col gap-4 rounded-xl bg-accent/20 dark:bg-accent/10 p-5">
@@ -188,6 +181,15 @@
 <p class="text-text-light dark:text-text-dark font-body text-base font-normal leading-relaxed">"I'm so impressed with the quality and hygiene. You can tell this is a premium product. Will definitely buy again."</p>
 <p class="text-text-muted-light dark:text-text-muted-dark font-body text-sm font-medium">— Emeka O.</p>
 </div>
+</div>
+</div>
+
+<div class="bg-primary/20 dark:bg-primary/10 p-8 m-4 rounded-lg flex flex-col items-center text-center gap-4">
+<h3 class="text-xl font-bold">Join Our Newsletter</h3>
+<p class="text-gray-600 dark:text-gray-300">Get exclusive offers and updates delivered straight to your inbox.</p>
+<div class="flex w-full max-w-sm flex-col gap-2 sm:flex-row">
+<input class="w-full rounded-lg border-gray-300 bg-background-light px-4 py-2 text-background-dark shadow-sm focus:border-primary focus:ring-primary dark:border-primary/30 dark:bg-background-dark dark:text-white" placeholder="Enter your email" type="email"/>
+<button class="flex shrink-0 items-center justify-center rounded-lg bg-primary px-5 py-2.5 font-bold text-background-dark">Subscribe</button>
 </div>
 </div>
 <!-- Footer -->

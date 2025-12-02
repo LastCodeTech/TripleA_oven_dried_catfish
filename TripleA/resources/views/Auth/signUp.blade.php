@@ -63,7 +63,9 @@
   </head>
 <body class="font-sans">  
 <div class="relative flex min-h-screen w-full flex-col items-center bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
-<h2 class="text-base md:xl font-semibold capitalize text-red-600 pt-2">hii</h2>
+@if (session()->has('message'))
+    <h2 class="text-base md:xl font-semibold capitalize text-red-600 pt-2">{{session('message')}}</h2>
+@endif
 <div class="flex w-full max-w-md flex-1 flex-col justify-center px-6 py-12">
 <div class="flex justify-center pb-8">
 <div class="text-center gap-2 text-2xl md:text-5xl ">
@@ -144,7 +146,7 @@
 <div class="h-8"></div>
 <div class="text-center">
 <p class="text-text-light dark:text-text-dark text-base font-normal">
-                    Already have an account? <a class="font-bold text-primary dark:text-accent underline" href="#">Log In</a>
+                    Already have an account? <a class="font-bold text-primary dark:text-accent underline" href="{{route('login')}}">Log In</a>
 </p>
 </div>
 </div>

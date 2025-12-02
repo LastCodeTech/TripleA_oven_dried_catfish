@@ -4,6 +4,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Triple A Oven-Dried Catfish - Gallery</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="https://kit.fontawesome.com/39c5fdd9a0.js" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Montserrat:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
@@ -52,29 +53,13 @@
     }
   </style>
   </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-deep-brown dark:text-cream-white">
-<div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark">
-<div class="fixed inset-0 z-50 flex hidden items-center justify-center bg-rich-black/90 backdrop-blur-sm" id="lightbox" onclick="this.classList.add('hidden')">
-<div class="relative flex h-full w-full flex-col items-center justify-center p-4">
-<button class="absolute top-4 right-4 z-50 flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white transition-colors hover:bg-white/30">
-<span class="material-symbols-outlined text-2xl">close</span>
-</button>
-<img alt="Enlarged gallery image" class="max-h-[80vh] max-w-[90vw] rounded-lg object-contain shadow-2xl" id="lightbox-img" src=""/>
-</div>
-</div>
-<header class="sticky top-0 z-40 flex items-center justify-between bg-cream-white/80 p-4 pb-3 dark:bg-rich-black/80 backdrop-blur-sm">
-<button class="flex size-10 items-center justify-center text-deep-brown dark:text-cream-white">
-<span class="material-symbols-outlined text-2xl">menu</span>
-</button>
-<h1 class="font-serif text-xl font-bold leading-tight tracking-tight text-deep-brown dark:text-cream-white">Our Gallery</h1>
-<button class="flex size-10 items-center justify-center text-deep-brown dark:text-cream-white">
-<span class="material-symbols-outlined text-2xl">shopping_bag</span>
-</button>
-</header>
+<body class="bg-slate-100 font-display text-deep-brown dark:text-cream-white">
+    <x-header />
+<div class="relative flex min-h-screen w-full flex-col bg-slate-100">
 <main class="flex-1 px-4 py-6">
 <div class="text-center">
-<h2 class="font-serif text-3xl font-bold leading-tight tracking-tight text-deep-brown dark:text-cream-white">A Glimpse Into Our Process</h2>
-<p class="pt-2 text-base font-normal leading-normal text-deep-brown/90 dark:text-cream-white/80">From fresh catch to perfectly dried, see the care we put into every batch.</p>
+<h2 class="font-serif text-3xl font-bold leading-tight tracking-tight text-slate-900">A Glimpse Into Our Process</h2>
+<p class="pt-2 text-base font-normal leading-normal text-slate-900">From fresh catch to perfectly dried, see the care we put into every batch.</p>
 </div>
 <div class="gallery-grid grid gap-3 pt-8 sm:gap-4">
 <div class="group relative cursor-pointer overflow-hidden rounded-lg shadow-md transition-shadow hover:shadow-xl" onclick="openLightbox('image-3715e4905d2149e38d4f40445d3129f1', 'Catfish drying in a modern, clean oven')">

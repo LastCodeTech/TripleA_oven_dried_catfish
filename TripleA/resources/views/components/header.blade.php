@@ -20,7 +20,7 @@
         <!-- ICONS -->
         <div class="flex items-center gap-5">
             <button class="text-2xl text-slate-700 hover:text-yellow-600">
-                <i class="fa-solid fa-phone"></i>
+              <a href="{{route('contact')}}">  <i class="fa-solid fa-phone"></i></a>
             </button>
             <button class="text-2xl text-slate-700 hover:text-yellow-600 relative">
                 <i class="fa-solid fa-basket-shopping"></i>

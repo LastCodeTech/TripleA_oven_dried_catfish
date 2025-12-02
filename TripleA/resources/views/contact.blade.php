@@ -5,6 +5,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Contact Page - Get in Touch</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="https://kit.fontawesome.com/39c5fdd9a0.js" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1" rel="stylesheet"/>
 <script id="tailwind-config">
@@ -44,15 +45,8 @@
   </style>
   </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
-<div class="relative min-h-screen w-full flex-col">
-<!-- Top App Bar -->
-<header class="sticky top-0 z-10 flex items-center justify-between border-b border-border-light dark:border-border-dark bg-background-light/80 dark:bg-background-dark/80 p-4 backdrop-blur-sm">
-<button class="flex size-10 shrink-0 items-center justify-center rounded-full text-text-light dark:text-text-dark">
-<span class="material-symbols-outlined text-2xl">arrow_back_ios_new</span>
-</button>
-<h1 class="flex-1 text-center text-lg font-bold leading-tight tracking-tight">Get in Touch</h1>
-<div class="size-10 shrink-0"></div>
-</header>
+<x-header />
+    <div class="relative min-h-screen w-full flex-col">
 <main class="flex flex-col gap-6 p-4 pb-28">
 <!-- Hero Section -->
 <section class="text-center">

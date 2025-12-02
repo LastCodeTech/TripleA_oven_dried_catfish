@@ -21,4 +21,7 @@ class TripleAController extends Controller
     public function blog(){
         return view('blog');
     }
+    public function contact(){
+        return view('contact');
+    }
 }

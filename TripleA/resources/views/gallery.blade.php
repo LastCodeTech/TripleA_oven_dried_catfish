@@ -17,11 +17,11 @@
       font-family: 'Playfair Display', serif;
     }
     .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     }
     @media (min-width: 400px) {
         .gallery-grid {
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         }
     }
   </style>
@@ -58,8 +58,8 @@
 <div class="relative flex min-h-screen w-full flex-col bg-slate-100">
 <main class="flex-1 px-4 py-6">
 <div class="text-center">
-<h2 class="font-serif text-3xl font-bold leading-tight tracking-tight text-slate-900">A Glimpse Into Our Process</h2>
-<p class="pt-2 text-base font-normal leading-normal text-slate-900">From fresh catch to perfectly dried, see the care we put into every batch.</p>
+<h2 class="font-serif text-3xl font-bold leading-tight tracking-tight text-[#1a4c42]">A Glimpse Into Our Process</h2>
+<p class="pt-2 text-base font-normal leading-normal text-[#1a4c42]">From fresh catch to perfectly dried, see the care we put into every batch.</p>
 </div>
 <div class="gallery-grid grid gap-3 pt-8 sm:gap-4">
 <div class="group relative cursor-pointer overflow-hidden rounded-lg shadow-md transition-shadow hover:shadow-xl" onclick="openLightbox('image-3715e4905d2149e38d4f40445d3129f1', 'Catfish drying in a modern, clean oven')">

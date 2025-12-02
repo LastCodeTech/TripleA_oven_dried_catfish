@@ -125,7 +125,7 @@
 <div class="p-4   mt-8">
 <h2 class="text-center text-text-light dark:text-text-dark font-display text-3xl font-bold leading-tight text-center mb-6">The Triple A Difference</h2>
 <div><div class="md:grid md:grid-cols-2  flex   flex-col gap-6">
-<div class="md:border-4 md:border-slate-700 md:bg-slate-200 md:py-7 md:px-8 md:rounded-xl flex items-center gap-4">
+<div class="md:border-4 md:border-[#1a4c42] md:bg-slate-200 md:py-7 md:px-8 md:rounded-xl flex items-center gap-4">
 <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-secondary/20 dark:text-secondary">
 <span class="material-symbols-outlined">health_and_safety</span>
 </div>
@@ -134,7 +134,7 @@
 <p class="font-body text-sm text-text-muted-light dark:text-text-muted-dark">Prepared in a spotless, certified facility.</p>
 </div>
 </div>
-<div class="md:border-4 md:border-slate-700 md:bg-slate-200 md:py-7 md:px-8 md:rounded-xl flex items-center gap-4">
+<div class="md:border-4 md:border-[#1a4c42] md:bg-slate-200 md:py-7 md:px-8 md:rounded-xl flex items-center gap-4">
 <div class=" flex size-12 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-secondary/20 dark:text-secondary">
 <span class="material-symbols-outlined">verified</span>
 </div>
@@ -143,7 +143,7 @@
 <p class="font-body text-sm text-text-muted-light dark:text-text-muted-dark">Enjoy a pure, grit-free taste every time.</p>
 </div>
 </div>
-<div class="md:border-4 md:border-slate-700 md:bg-slate-200 md:py-7 md:px-8 md:rounded-xl flex items-center gap-4">
+<div class="md:border-4 md:border-[#1a4c42] md:bg-slate-200 md:py-7 md:px-8 md:rounded-xl flex items-center gap-4">
 <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-secondary/20 dark:text-secondary">
 <span class="material-symbols-outlined">workspace_premium</span>
 </div>
@@ -152,7 +152,7 @@
 <p class="font-body text-sm text-text-muted-light dark:text-text-muted-dark">Only the best, hand-selected catfish make the cut.</p>
 </div>
 </div>
-<div class="md:border-4 md:border-slate-700 md:bg-slate-200 md:py-7 md:px-8 md:rounded-xl flex items-center gap-4">
+<div class="md:border-4 md:border-[#1a4c42] md:bg-slate-200 md:py-7 md:px-8 md:rounded-xl flex items-center gap-4">
 <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-secondary/20 dark:text-secondary">
 <span class="material-symbols-outlined">eco</span>
 </div>

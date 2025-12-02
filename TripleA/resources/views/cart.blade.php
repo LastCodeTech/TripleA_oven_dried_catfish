@@ -5,6 +5,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Cart Page - Your Order</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="https://kit.fontawesome.com/39c5fdd9a0.js" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script>
@@ -53,15 +54,8 @@
   </style>
   </head>
 <body class="font-display bg-background-light dark:bg-background-dark">
+    <x-header />
 <div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
-<!-- Top App Bar -->
-<header class="sticky top-0 z-10 flex items-center bg-background-light dark:bg-background-dark/80 backdrop-blur-sm p-4 pb-2 justify-between border-b border-neutral-subtle-light dark:border-neutral-subtle-dark">
-<button class="text-neutral-text-light dark:text-neutral-text-dark flex size-10 shrink-0 items-center justify-center rounded-full">
-<span class="material-symbols-outlined text-2xl">arrow_back</span>
-</button>
-<h1 class="text-primary dark:text-secondary text-lg font-bold leading-tight tracking-tight flex-1 text-center">Your Order</h1>
-<div class="size-10 shrink-0"></div> <!-- Spacer for centering title -->
-</header>
 <main class="flex-grow pb-56"> <!-- Padding bottom to avoid overlap with sticky footer -->
 <!-- Cart Items List -->
 <div class="flex flex-col gap-4 pt-6 px-4">
@@ -76,8 +70,8 @@
 </div>
 </div>
 <div class="flex flex-col items-end justify-between self-stretch shrink-0">
-<button class="text-neutral-text-light/60 dark:text-neutral-text-dark/60">
-<span class="material-symbols-outlined text-xl">delete</span>
+<button class="text-[#1a4c42] ">
+<i class="fa-solid fa-trash-can text-xl"></i>
 </button>
 <div class="flex items-center gap-2 text-neutral-text-light dark:text-neutral-text-dark">
 <button class="text-lg font-medium leading-normal flex size-7 items-center justify-center rounded-full bg-neutral-subtle-light dark:bg-neutral-subtle-dark cursor-pointer">-</button>
@@ -97,8 +91,8 @@
 </div>
 </div>
 <div class="flex flex-col items-end justify-between self-stretch shrink-0">
-<button class="text-neutral-text-light/60 dark:text-neutral-text-dark/60">
-<span class="material-symbols-outlined text-xl">delete</span>
+<button class="text-[#1a4c42] ">
+<i class="fa-solid fa-trash-can text-xl"></i>
 </button>
 <div class="flex items-center gap-2 text-neutral-text-light dark:text-neutral-text-dark">
 <button class="text-lg font-medium leading-normal flex size-7 items-center justify-center rounded-full bg-neutral-subtle-light dark:bg-neutral-subtle-dark cursor-pointer">-</button>
@@ -128,7 +122,7 @@
 <p class="text-secondary text-xl font-bold leading-normal text-right">$95.00</p>
 </div>
 </div>
-<button class="mt-5 w-full bg-primary text-white dark:bg-secondary dark:text-primary font-bold py-4 px-5 rounded-xl text-base leading-tight tracking-tight shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-primary/50 dark:focus:ring-secondary/50 focus:ring-offset-2 dark:focus:ring-offset-background-dark">
+<button class="mt-5 w-full  text-white bg-[#1a4c42] dark:text-primary font-bold py-4 px-5 rounded-xl text-base leading-tight tracking-tight shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-primary/50 dark:focus:ring-secondary/50 focus:ring-offset-2 dark:focus:ring-offset-background-dark">
                     Proceed to Checkout
                 </button>
 </div>

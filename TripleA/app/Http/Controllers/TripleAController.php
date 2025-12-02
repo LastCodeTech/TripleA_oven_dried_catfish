@@ -24,4 +24,10 @@ class TripleAController extends Controller
     public function contact(){
         return view('contact');
     }
+    public function cart(){
+        return view('cart');
+    }
+    public function user(){
+        return view('user');
+    }
 }

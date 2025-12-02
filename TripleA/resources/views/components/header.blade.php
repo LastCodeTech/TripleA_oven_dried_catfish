@@ -9,21 +9,22 @@
         <!-- DESKTOP NAV -->
         <nav class="hidden lg:block">
             <ul class="flex items-center gap-8">
-                <li><a href="{{route('home')}}" class="text-lg font-medium text-slate-700 hover:text-red-600">Home</a></li>
-                <li><a href='{{route('shop')}}' class="text-lg font-medium text-slate-700 hover:text-red-600">Shop</a></li>
-                <li><a href="{{route('about')}}" class="text-lg font-medium text-slate-700 hover:text-red-600">About</a></li>
-                <li><a href="{{route('gallery')}}" class="text-lg font-medium text-slate-700 hover:text-red-600">gallery</a></li>
-                <li><a href="{{route('blog')}}" class="text-lg font-medium text-slate-700 hover:text-red-600">Blog</a></li>
+                <li><a href="{{route('home')}}" class="text-lg font-medium   text-[#1a4c42]   ">Home</a></li>
+                <li><a href='{{route('shop')}}' class="text-lg font-medium   text-[#1a4c42]   ">Shop</a></li>
+                <li><a href="{{route('about')}}" class="text-lg font-medium    text-[#1a4c42] ">About</a></li>
+                <li><a href="{{route('gallery')}}" class="text-lg font-medium   text-[#1a4c42]">gallery</a></li>
+                <li><a href="{{route('blog')}}" class="text-lg font-medium   text-[#1a4c42]   ">Blog</a></li>
+                <li><a href="{{route('contact')}}" class="text-lg font-medium   text-[#1a4c42]   ">contact</a></li>
             </ul>
         </nav>
 
         <!-- ICONS -->
         <div class="flex items-center gap-5">
-            <button class="text-2xl text-slate-700 hover:text-yellow-600">
-              <a href="{{route('contact')}}">  <i class="fa-solid fa-phone"></i></a>
+            <button class="text-2xl  text-[#1a4c42] hover:text-yellow-600">
+              <a href="{{route('user')}}">  <i class="fa-solid fa-user"></i></a>
             </button>
-            <button class="text-2xl text-slate-700 hover:text-yellow-600 relative">
-                <i class="fa-solid fa-basket-shopping"></i>
+            <button class="text-2xl  text-[#1a4c42] hover:text-yellow-600 relative">
+                <a href="{{route('cart')}}"><i class="fa-solid fa-basket-shopping"></i></a>
                 <!-- Cart count -->
                 <span class="absolute -top-1 -right-2 bg-red-600 text-white text-xs px-1.5 rounded-full">3</span>
             </button>
@@ -38,11 +39,12 @@
     <!-- MOBILE NAV -->
     <nav id="mobileMenu" class="hidden lg:hidden mt-4 z-10 relative">
         <ul class="flex flex-col gap-4">
-            <li><a href='{{route('home')}}' class="text-lg text-slate-700 hover:text-red-600">Home</a></li>
-            <li><a href='{{route('shop')}}' class="text-lg text-slate-700 hover:text-red-600">Shop</a></li>
-            <li><a href="{{route('about')}}" class="text-lg text-slate-700 hover:text-red-600">About</a></li>
-            <li><a href="{{route('gallery')}}" class="text-lg text-slate-700 hover:text-red-600">Gallery</a></li>
-            <li><a href="{{route('blog')}}" class="text-lg text-slate-700 hover:text-red-600">Blog</a></li>
+            <li><a href='{{route('home')}}' class="text-lg     text-[#1a4c42]">Home</a></li>
+            <li><a href='{{route('shop')}}' class="text-lg     text-[#1a4c42]">Shop</a></li>
+            <li><a href="{{route('about')}}" class="text-lg    text-[#1a4c42] ">About</a></li>
+            <li><a href="{{route('gallery')}}" class="text-lg  text-[#1a4c42] ">Gallery</a></li>
+            <li><a href="{{route('blog')}}" class="text-lg     text-[#1a4c42] ">Blog</a></li>
+            <li><a href="{{route('contact')}}" class="text-lg     text-[#1a4c42] ">contact</a></li>
         </ul>
     </nav>
 </header>

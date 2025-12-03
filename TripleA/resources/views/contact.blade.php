@@ -52,9 +52,17 @@
 <section class="text-center">
 <h2 class="text-3xl font-bold tracking-tight text-text-light dark:text-text-dark">Contact Us</h2>
 <p class="mt-2 text-base text-text-light/80 dark:text-text-dark/80">We're here to help. Reach out with any questions.</p>
+@if (session()->has('message'))
+    <h1 class="text-sm md:text-md py-2 capitalize text-green-600">{{session('message')}}</h1>
+@endif
+@if (session()->has('error'))
+    <h1 class="text-sm md:text-md py-2 capitalize text-red-600">{{session('message')}}</h1>
+@endif
 </section>
 <!-- Contact Form -->
 <section class="rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-4 md:mx-[10rem] shadow-sm">
+<form action="contactmsg.process" method="POST">
+@csrf
 <h3 class="px-2 pb-4 text-xl font-bold leading-tight tracking-tight">Send us a Message</h3>
 <div class="flex flex-col gap-4">
 <h1>Dear {{Auth::user()->name}}, thank you for reaching out.</h1>
@@ -62,18 +70,27 @@
 
 <label class="flex flex-col">
 <p class="pb-2 text-sm font-medium">Phone Number</p>
-<input class="form-input h-12 w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-border-light bg-background-light p-3 text-base placeholder:text-text-light/50 focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/20 dark:border-border-dark dark:bg-background-dark dark:text-text-dark dark:placeholder:text-text-dark/50" placeholder="input your phone number" type="tel"/>
+<input value="{{old('message')}}" name='number' class="form-input h-12 w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-border-light bg-background-light p-3 text-base placeholder:text-text-light/50 focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/20 dark:border-border-dark dark:bg-background-dark dark:text-text-dark dark:placeholder:text-text-dark/50" placeholder="input your phone number" type="tel"/>
+@error('number')
+    <h1 class="text-sm md:text-md py-2 capitalize text-red-600">{{$message}}</h1>
+@enderror
 </label>
 <label class="flex flex-col">
 <p class="pb-2 text-sm font-medium">Subject</p>
-<input class="form-input h-12 w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-border-light bg-background-light p-3 text-base placeholder:text-text-light/50 focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/20 dark:border-border-dark dark:bg-background-dark dark:text-text-dark dark:placeholder:text-text-dark/50" placeholder="e.g., Question about my order" type="text"/>
+<input value="{{old('message')}}" name='subject' class="form-input h-12 w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-border-light bg-background-light p-3 text-base placeholder:text-text-light/50 focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/20 dark:border-border-dark dark:bg-background-dark dark:text-text-dark dark:placeholder:text-text-dark/50" placeholder="e.g., Question about my order" type="text"/>
+@error('message')
+    <h1 class="text-sm md:text-md py-2 capitalize text-red-600">{{$message}}</h1>
+@enderror
 </label>
 <label class="flex flex-col">
 <p class="pb-2 text-sm font-medium">Your Message</p>
-<textarea class="form-textarea w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-border-light bg-background-light p-3 text-base placeholder:text-text-light/50 focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/20 dark:border-border-dark dark:bg-background-dark dark:text-text-dark dark:placeholder:text-text-dark/50" placeholder="Type your message here..." rows="5"></textarea>
+<textarea name='message' value='{{old('message')}}' class="form-textarea w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-border-light bg-background-light p-3 text-base placeholder:text-text-light/50 focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/20 dark:border-border-dark dark:bg-background-dark dark:text-text-dark dark:placeholder:text-text-dark/50" placeholder="Type your message here..." rows="5"></textarea>
+@error('message')
+    <h1 class="text-sm md:text-md py-2 capitalize text-red-600">{{$message}}</h1>
+@enderror
 </label>
-<button class="flex h-12 w-full items-center justify-center rounded-lg bg-[#1a4c42] text-base font-bold text-white transition-opacity hover:opacity-90">Send Message</button>
-</div>
+<input type='submit' value='submit message'  class="flex h-12 w-full items-center justify-center rounded-lg bg-[#1a4c42] text-base font-bold text-white transition-opacity hover:opacity-90" />
+</div></form>
 </section>
 <!-- Quick Contact Section -->
 <section class="rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-4 shadow-sm">

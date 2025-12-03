@@ -10,6 +10,7 @@ Route::post('/logout.process',[AuthController::class,'logoutProcess'])->name('lo
 Route::post('/login.process',[AuthController::class,'loginProcess'])->name('login.process');
 Route::get('/blog',[TripleAController::class,'blog'])->name('blog');
 Route::get('/',[TripleAController::class,'home'])->name('home');
+Route::post('/contactmsg.process',[TripleAController::class,'contactmsgProcess'])->name('contactmsg.process');
 
 
 

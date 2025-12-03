@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contactmsg;
 use App\Models\Product;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TripleAController extends Controller
 {
@@ -42,6 +45,21 @@ class TripleAController extends Controller
     }
     public function order(){
         return view('order');
+    }
+    public function contactmsgProcess(Request $request){
+       $validate =$request->validate([
+        'number'=>'min:11|integer|required',
+        'subject'=>'min:10|required|string',
+        'message'=>'min:10|required|string'
+       ]);
+       $validate['user_id']=Auth::user()->id;
+       $create=Contactmsg::create($validate);
+       if($create){
+        return redirect()->route('contact')->with('message','your message has been recieved we will give you a call');
+       }
+       else{
+         return redirect()->route('contact')->with('message','An error occurred pls retry or check back later ');
+       }
     }
    
 }

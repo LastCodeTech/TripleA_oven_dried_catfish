@@ -111,25 +111,8 @@
 <div class="flex w-full flex-col items-center gap-4 px-0 py-3">
 <input value="Log In" type="submit" class="flex h-14 w-full items-center justify-center gap-2 whitespace-nowrap rounded-lg bg-primary px-5 py-3 text-base font-semibold leading-7 text-white shadow-sm transition-transform duration-200 ease-in-out hover:scale-[1.02] active:scale-[0.98]"/>
 </div></form>
-<!-- Or Divider -->
-<div class="flex items-center gap-4 py-4">
-<div class="h-px flex-1 bg-border-light dark:bg-border-dark"></div>
-<p class="text-text-muted-light dark:text-text-muted-dark text-sm">or</p>
-<div class="h-px flex-1 bg-border-light dark:bg-border-dark"></div>
-</div>
+
 <!-- Social Login Buttons -->
-<div class="flex w-full flex-col items-center gap-4">
-<button class="flex h-14 w-full items-center justify-center gap-3 whitespace-nowrap rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark px-5 py-3 text-base font-medium leading-7 text-text-light dark:text-text-dark shadow-sm transition-transform duration-200 ease-in-out hover:scale-[1.02] active:scale-[0.98]">
-<img alt="Google logo" class="h-6 w-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHu2b_oMi6BhU3LxilwdBYv_DW0R8tfbs7uonaDmILjDf2oB6dB_h8M6wa3BzELnwx1yExNOThzJsfL23fAHTm9XEzFBh6WQJQ16nFXake3D4eaWsUzCxTy1MV7ouOQrqyRbs842v4KrwPbElz8RkQrVPQKPqJdUVFeAf4QDUMKCxLSr-gnupL-UiIDue3NJGLViksIotCtJsdPhMry3Aeyxa3QVs6M_z8bj1WQq70RWBd7s4-ilcfi7FZbWpiE4akXBNHku_zjP0"/>
-                    Continue with Google
-                </button>
-<button class="flex h-14 w-full items-center justify-center gap-3 whitespace-nowrap rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark px-5 py-3 text-base font-medium leading-7 text-text-light dark:text-text-dark shadow-sm transition-transform duration-200 ease-in-out hover:scale-[1.02] active:scale-[0.98]">
-<img alt="Apple logo" class="h-6 w-6 dark:invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWD7eTg365bHXiGFa2126B-p674jzVMlm_LARrWSUx24mUIs1bC7KcB5D2DRUuTimf_GWKmhYuDeU-7Lzfl3hjSPIzFN74x182yFwZ9hQzS3KKFohyF9Z0W26PYJAnKyW1My3XO3ZMGyBX7iHAuyPcw09YZTL3R6Qg6f_mF2Sk3z1HNjC-XeYPY3LMG_n3iO4xmnAuy-pnv53FXiDGayXITM7SwzpVWHimzbOpP8WYxNK3PeMn6MEikO_TWPvQQnEiQFi5uVkPYXk"/>
-                    Continue with Apple
-                </button>
-</div>
-<!-- Spacer -->
-<div class="h-8"></div>
 <!-- Sign Up Prompt -->
 <div class="text-center">
 <p class="text-text-light dark:text-text-dark text-base font-normal">

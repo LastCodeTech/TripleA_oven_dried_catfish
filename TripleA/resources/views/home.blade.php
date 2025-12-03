@@ -196,7 +196,7 @@
 <p class="text-gray-600 dark:text-gray-300">Get exclusive offers and updates delivered straight to your inbox.</p>
 <div class="flex w-full max-w-sm flex-col gap-2 sm:flex-row">
 <input class="w-full rounded-lg border-gray-300 bg-background-light px-4 py-2 text-background-dark shadow-sm focus:border-primary focus:ring-primary dark:border-primary/30 dark:bg-background-dark dark:text-white" placeholder="Enter your email" type="email"/>
-<button class="flex shrink-0 items-center justify-center rounded-lg bg-primary px-5 py-2.5 font-bold text-background-dark">Subscribe</button>
+<button class="flex shrink-0 items-center justify-center rounded-lg bg-primary px-5 py-2.5 font-bold text-white">Subscribe</button>
 </div>
 </div>
 <!-- Footer -->

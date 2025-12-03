@@ -30,4 +30,7 @@ class TripleAController extends Controller
     public function dashboard(){
         return view('dashboard');
     }
+    public function checkout(){
+        return view('checkout');
+    }
 }

@@ -122,9 +122,9 @@
 <p class="text-secondary text-xl font-bold leading-normal text-right">$95.00</p>
 </div>
 </div>
-<button class="mt-5 w-full  text-white bg-[#1a4c42] dark:text-primary font-bold py-4 px-5 rounded-xl text-base leading-tight tracking-tight shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-primary/50 dark:focus:ring-secondary/50 focus:ring-offset-2 dark:focus:ring-offset-background-dark">
-                    Proceed to Checkout
-                </button>
+ <a href="{{route('checkout')}}"><button class="mt-5 w-full  text-white bg-[#1a4c42] dark:text-primary font-bold py-4 px-5 rounded-xl text-base leading-tight tracking-tight shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-primary/50 dark:focus:ring-secondary/50 focus:ring-offset-2 dark:focus:ring-offset-background-dark">
+                   Proceed to Checkout
+                </button></a>
 </div>
 </footer>
 </div>

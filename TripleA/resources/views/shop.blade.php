@@ -77,7 +77,7 @@
 </div>
 <!-- Image Grid -->
 <div class="grid grid-cols-2 gap-4 p-4">
-<div class="flex flex-col gap-2 rounded-xl bg-white p-3 shadow-sm dark:bg-gray-800">
+<div data-trig="fade-up" class="flex flex-col gap-2 rounded-xl bg-white p-3 shadow-sm dark:bg-gray-800">
 <div class="aspect-[3/4] w-full rounded-lg bg-cover bg-center bg-no-repeat" data-alt="Close-up of a smoked catfish fillet on a wooden board." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDIc2V7JjABR6XrCf9h4N8ulHiQj74JkcJFjX4ECq4BmMqgcPB-96Kin-RbetuygtyxKFHyanmvZ7cYLzgIEzsdm4rngJ-oiymRQs_DqJqPe_X8xktxU2aoLv4AbwGf7Cr_DfftHp-7MvCxhlWMAkF9tCuEoMLu_NGaiokkGNRlO0mIS8isF-cK4tC3UXauqeiOVvnCJD2EC_yp4VZsqEpGs9GPbnodf7QDDz1wXh8ixY8hDSgqQCNUiT6VVGsV5q4fhdffl3CGziI");'></div>
 <div>
 <p class="font-medium text-black dark:text-white">Smoked Catfish Fillet</p>
@@ -159,4 +159,10 @@
 </main>
 
 </div>
+
+  <script src="https://cdn.jsdelivr.net/gh/sh4hids/trigjs/dist/trig.min.js">
+  Trig.init();
+   alert('hello');
+    </script>
+
 </body></html>

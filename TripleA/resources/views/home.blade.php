@@ -187,12 +187,13 @@
 </div>
 <p class="text-text-light dark:text-text-dark font-body text-base font-normal leading-relaxed">"I'm so impressed with the quality and hygiene. You can tell this is a premium product. Will definitely buy again."</p>
 <p class="text-text-muted-light dark:text-text-muted-dark font-body text-sm font-medium">— Emeka O.</p>
+<h1 id="faq"  class=""></h1>
 </div>
 </div>
 </div>
 
 <!-- FAQ Section -->
-<section id="faq" class='md:py-10 md:px-20 px-5'>
+<section  class='md:py-10 md:px-20 px-5'>
 <h3 class="px-4 pb-4 text-xl font-bold leading-tight tracking-tight">Frequently Asked Questions</h3>
 <div class="flex flex-col gap-2">
 <details class="group rounded-xl border border-border-light bg-card-light p-4 shadow-sm open:shadow-md dark:border-border-dark dark:bg-card-dark">
@@ -232,9 +233,8 @@
 <div class="bg-primary/90 dark:bg-black/20 mt-12 p-8 text-center text-white">
 <div class="flex flex-col gap-6">
 <div class="flex justify-center gap-6">
-<a class="font-body text-sm" href="#">FAQ</a>
-<a class="font-body text-sm" href="#">Shipping</a>
-<a class="font-body text-sm" href="#">Contact Us</a>
+<a class="font-body text-sm" href="#faq">FAQ</a>
+<a class="font-body text-sm" href="{{route('contact')}}">Contact Us</a>
 </div>
 <div class="flex justify-center gap-4">
 <img alt="Instagram logo" class="h-6 w-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD_6ZNJz8i9AX1L2k0Hep0VnVo_K3h0EINBIM-sYrjYq7wR96UBVDTnhZkVOov12iRUb4AVflB0noleV1NjY4bsxM08W43mD_mT_COj6ig9n6qp4zjmjp0I3hmAq9yP6MTeAsuBq3mua8pL-UaRPJ8DV8kEKNITjiaCExaTLMFxsd4HH5KGaETyFuHH3OQRSvNPis8VdBgtGoRBsRHFcvhTtSInBkKBdsdVCzNOQ4F0LboQYPzAx8K8dpoMhdC_4dQspWmOnqRDJY"/>

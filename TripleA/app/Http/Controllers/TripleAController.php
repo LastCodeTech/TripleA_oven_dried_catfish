@@ -37,5 +37,8 @@ class TripleAController extends Controller
     public function profile(){
         return view('profile');
     }
+    public function order(){
+        return view('order');
+    }
    
 }

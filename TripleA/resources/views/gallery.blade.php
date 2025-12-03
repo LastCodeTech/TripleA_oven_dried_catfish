@@ -61,7 +61,7 @@
 <h2 class="font-serif text-3xl font-bold leading-tight tracking-tight text-[#1a4c42]">A Glimpse Into Our Process</h2>
 <p class="pt-2 text-base font-normal leading-normal text-[#1a4c42]">From fresh catch to perfectly dried, see the care we put into every batch.</p>
 </div>
-<div class="gallery-grid grid gap-3 pt-8 sm:gap-4">
+<div  class="gallery-grid grid gap-3 pt-8 sm:gap-4">
 <div class="group relative cursor-pointer overflow-hidden rounded-lg shadow-md transition-shadow hover:shadow-xl" onclick="openLightbox('image-3715e4905d2149e38d4f40445d3129f1', 'Catfish drying in a modern, clean oven')">
 <img alt="Catfish drying in a modern, clean oven" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8gRQon-Q03apLOfXFadGUZfTaK3X4_nM6EMjwrYOIok6bh_Szc7yTgV6NimDhT087EIQuwSlOBQziTS9cLQFY1FneOW7FFz1eM7PplvLlgtMi4Z5509xwR7g11gikwKEJDEBpmKYPyqlHi5cxRl0H-z4Vd83taWSg55YKoOgue5htaG4OmgA-rtiTq5Pg0BxDAYLa3vyegaIy3H307JlTrlaXOC_l-5tNrWljpJTtMjuGnJV48upZYlu-IxnECXzCwYkMn3iQKOEb"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
@@ -69,7 +69,7 @@
 <p class="text-sm font-semibold text-white">The Drying Process</p>
 </div>
 </div>
-<div class="group relative col-span-2 cursor-pointer overflow-hidden rounded-lg shadow-md transition-shadow hover:shadow-xl" onclick="openLightbox('https://lh3.googleusercontent.com/aida-public/AB6AXuBqd3lzn1L_Qh6xMEeJYToHeCT2MlGBvcntbu9TBpa8rbLi408FSQ0XOive-9jqyvp417VyB_KUX3usjuoYe4SKZOP5xWvaOHbw1jGcni41OdbMn69hvE8cAHTTTt1rIDdhQYKE8ysyPdeiONlQejJ0YWKM2hCVwe8thf4lMUiECTl84K4lL6agf1iPPhU9NM7Sv0ZwY9UGAX_lag8fcVaYrS8sLzY1SWRqInlw2qz5IppwZrnaFa-9yP3pK4MUHpS0mAzyRxm3_Sqk', 'Close-up of a perfectly smoked and spiced oven-dried catfish, ready for packaging')">
+<div  class="group relative col-span-2 cursor-pointer overflow-hidden rounded-lg shadow-md transition-shadow hover:shadow-xl" onclick="openLightbox('https://lh3.googleusercontent.com/aida-public/AB6AXuBqd3lzn1L_Qh6xMEeJYToHeCT2MlGBvcntbu9TBpa8rbLi408FSQ0XOive-9jqyvp417VyB_KUX3usjuoYe4SKZOP5xWvaOHbw1jGcni41OdbMn69hvE8cAHTTTt1rIDdhQYKE8ysyPdeiONlQejJ0YWKM2hCVwe8thf4lMUiECTl84K4lL6agf1iPPhU9NM7Sv0ZwY9UGAX_lag8fcVaYrS8sLzY1SWRqInlw2qz5IppwZrnaFa-9yP3pK4MUHpS0mAzyRxm3_Sqk', 'Close-up of a perfectly smoked and spiced oven-dried catfish, ready for packaging')">
 <img alt="Close-up of a perfectly smoked and spiced oven-dried catfish, ready for packaging" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqd3lzn1L_Qh6xMEeJYToHeCT2MlGBvcntbu9TBpa8rbLi408FSQ0XOive-9jqyvp417VyB_KUX3usjuoYe4SKZOP5xWvaOHbw1jGcni41OdbMn69hvE8cAHTTTt1rIDdhQYKE8ysyPdeiONlQejJ0YWKM2hCVwe8thf4lMUiECTl84K4lL6agf1iPPhU9NM7Sv0ZwY9UGAX_lag8fcVaYrS8sLzY1SWRqInlw2qz5IppwZrnaFa-9yP3pK4MUHpS0mAzyRxm3_Sqk"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
 <div class="absolute bottom-0 left-0 p-3">
@@ -118,6 +118,9 @@
     this.classList.add('hidden');
     document.body.style.overflow = 'auto';
   });
+
+ 
+
 </script>
 
 </body></html>

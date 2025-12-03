@@ -79,7 +79,7 @@
 <!-- Section Header -->
 <h3 class="text-deep-ocean-blue dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Quick Links</h3>
 <!-- Text Grid -->
-<div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+<div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4 md:px-20">
 <a href="{{route('profile')}}">
   <div class="flex flex-1 gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#1C2C3A] p-4 flex-col">
 <span class="material-symbols-outlined text-earthy-brown text-2xl">person</span>
@@ -89,20 +89,22 @@
 </div>
 </div>
 </a>
-<div class="flex flex-1 gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#1C2C3A] p-4 flex-col">
+<a href="{{route('order')}}">
+  <div class="flex flex-1 gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#1C2C3A] p-4 flex-col">
 <span class="material-symbols-outlined text-earthy-brown text-2xl">receipt_long</span>
 <div class="flex flex-col gap-1">
 <h2 class="text-deep-ocean-blue dark:text-white text-base font-bold leading-tight">Order History</h2>
 <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">View past orders</p>
 </div>
 </div>
-<div class="flex flex-1 gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#1C2C3A] p-4 flex-col">
+</a>
+{{-- <div class="flex flex-1 gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#1C2C3A] p-4 flex-col">
 <span class="material-symbols-outlined text-earthy-brown text-2xl">home_pin</span>
 <div class="flex flex-col gap-1">
 <h2 class="text-deep-ocean-blue dark:text-white text-base font-bold leading-tight">Saved Addresses</h2>
 <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Edit your addresses</p>
 </div>
-</div>
+</div> --}}
 <div class="flex flex-1 gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#1C2C3A] p-4 flex-col">
 <span class="material-symbols-outlined text-earthy-brown text-2xl">credit_card</span>
 <div class="flex flex-col gap-1">

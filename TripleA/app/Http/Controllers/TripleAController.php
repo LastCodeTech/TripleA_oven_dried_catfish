@@ -12,7 +12,8 @@ class TripleAController extends Controller
         return view('home',compact('products'));
     }
     public function shop(){
-        return view('shop');
+         $products=Product::all();
+        return view('shop',compact('products'));
     }
     public function about(){
         return view('about');

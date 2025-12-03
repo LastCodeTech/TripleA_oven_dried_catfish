@@ -61,7 +61,7 @@
 <!-- Hero Section -->
 <div class="@container">
 <div class="@[480px]:p-4 p-0">
-<div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4 text-center" data-alt="High-quality, appetizing shot of oven-dried catfish on a dark slate background" style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAR4zvV5oY38I1vR92rpF-5BlGy55AtM_VCOTlofl_kvEFkKwKQBeMj3v1t2tBxjMAlXZTKQbccSx44M9RVFyxhIbl7FDoBoqiRyK5I9aA0eOc7TnIAo1xUnjlQ7PHn2AdMtXrx4Jd_zjICf6HG8o9ec127K0aDxEf9-nIUZiAkMzcepMMUV-6cPCc-2GfaTeiH-oRRyP__nnqx-OdQcbM1mZr7sl7cQIFxoZqyfIRwAzkm9mkJio4NT-nooovmRWPjfdQrFN_bnTY");'>
+<div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-fixed bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4 text-center" data-alt="High-quality, appetizing shot of oven-dried catfish on a dark slate background" style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%), url("{{asset('images/catfish image3.webp')}}")'>
 <div class="flex flex-col gap-2">
 <h1 class="text-white font-display text-4xl font-black leading-tight tracking-tight @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight">
                             Pure Taste. Zero Sand. 100% Hygienic.
@@ -92,7 +92,7 @@
 <div class="flex items-stretch px-4 gap-4">
 @foreach ($products as $product)
     <div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-white dark:bg-background-dark shadow-[0_2px_8px_rgba(0,0,0,0.05)] dark:border dark:border-white/10 min-w-60">
-<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-t-xl flex flex-col" data-alt="Packaging for 1kg oven-dried catfish" style='background-image:  url({{Storage::disk('public')->url($product->image)}});'></div>
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-t-xl flex flex-col" data-alt="Packaging for 1kg oven-dried catfish" style='background-image:  url("{{Storage::disk('public')->url($product->image)}}");'></div>
 <div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
 <div>
 <p class="text-text-light dark:text-text-dark font-body text-base font-medium leading-normal">{{$product->name}}</p>

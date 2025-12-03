@@ -57,14 +57,9 @@
 <section class="rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-4 md:mx-[10rem] shadow-sm">
 <h3 class="px-2 pb-4 text-xl font-bold leading-tight tracking-tight">Send us a Message</h3>
 <div class="flex flex-col gap-4">
-<label class="flex flex-col">
-<p class="pb-2 text-sm font-medium">Full Name</p>
-<input class="form-input h-12 w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-border-light bg-background-light p-3 text-base placeholder:text-text-light/50 focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/20 dark:border-border-dark dark:bg-background-dark dark:text-text-dark dark:placeholder:text-text-dark/50" placeholder="Enter your full name" type="text"/>
-</label>
-<label class="flex flex-col">
-<p class="pb-2 text-sm font-medium">Email Address</p>
-<input class="form-input h-12 w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-border-light bg-background-light p-3 text-base placeholder:text-text-light/50 focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/20 dark:border-border-dark dark:bg-background-dark dark:text-text-dark dark:placeholder:text-text-dark/50" placeholder="you@example.com" type="email"/>
-</label>
+<h1>Dear {{Auth::user()->name}}, thank you for reaching out.</h1>
+<p>Please provide us with necessary information below, and our customer support team will attend to your request promptly.</p>
+
 <label class="flex flex-col">
 <p class="pb-2 text-sm font-medium">Phone Number</p>
 <input class="form-input h-12 w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-border-light bg-background-light p-3 text-base placeholder:text-text-light/50 focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/20 dark:border-border-dark dark:bg-background-dark dark:text-text-dark dark:placeholder:text-text-dark/50" placeholder="input your phone number" type="tel"/>

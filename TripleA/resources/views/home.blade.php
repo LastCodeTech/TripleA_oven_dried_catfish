@@ -192,7 +192,7 @@
 </div>
 
 <!-- FAQ Section -->
-<section id="faq" class='py-10 px-20'>
+<section id="faq" class='md:py-10 md:px-20 px-5'>
 <h3 class="px-4 pb-4 text-xl font-bold leading-tight tracking-tight">Frequently Asked Questions</h3>
 <div class="flex flex-col gap-2">
 <details class="group rounded-xl border border-border-light bg-card-light p-4 shadow-sm open:shadow-md dark:border-border-dark dark:bg-card-dark">

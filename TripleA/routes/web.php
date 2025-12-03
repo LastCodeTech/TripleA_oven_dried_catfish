@@ -20,7 +20,7 @@ Route::get('/about',[TripleAController::class,'about'])->name('about');
 Route::get('/blog',[TripleAController::class,'blog'])->name('blog');
 Route::get('/checkout',[TripleAController::class,'checkout'])->name('checkout');
 Route::get('/support',[TripleAController::class,'support'])->name('support');
-Route::get('/faq',[TripleAController::class,'faq'])->name('faq');
+Route::get('/profile',[TripleAController::class,'profile'])->name('profile');
 
 
 });

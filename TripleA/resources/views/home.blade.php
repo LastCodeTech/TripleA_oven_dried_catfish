@@ -86,46 +86,24 @@
 </div>
 </div>
 </div>
-<!-- Bestsellers Section -->
+<!-- Bestsellers Section sm screen -->
 <h2 class="text-text-light dark:text-text-dark font-display text-3xl font-bold leading-tight px-4 pb-3 pt-8 md:text-center md:py-3">Our Bestsellers</h2>
 <div class="flex  md:justify-evenly overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
 <div class="flex items-stretch px-4 gap-4">
-<div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-white dark:bg-background-dark shadow-[0_2px_8px_rgba(0,0,0,0.05)] dark:border dark:border-white/10 min-w-60">
-<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-t-xl flex flex-col" data-alt="Packaging for 250g oven-dried catfish" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDXR35XIIgUju_RXPDFhwUsMvhqlGmu13sjpG9jMu6N6GzTSxz4DLGYT5gZiMmIF0PYeqQFL9tLeEKeiCo9kRfXPi3lczSnW0QCcLG_rxZnkIMHJf7VMl9ASabTCEd2RGgZH7rWHC5crJzCwEONcCRxED83YLsl-wMLALpp8uoOw15KD9F3w6H2EBS_OUOOFxZJ7_IoYbMi9cqz4gMlhRcGemmAKa5qVZxlG70sLhYAHBnvC86KlLp-Pli1N8va94MdPwpiZvlMXXA");'></div>
+@foreach ($products as $product)
+    <div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-white dark:bg-background-dark shadow-[0_2px_8px_rgba(0,0,0,0.05)] dark:border dark:border-white/10 min-w-60">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-t-xl flex flex-col" data-alt="Packaging for 1kg oven-dried catfish" style='background-image:  url({{Storage::disk('public')->url($product->image)}});'></div>
 <div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
 <div>
-<p class="text-text-light dark:text-text-dark font-body text-base font-medium leading-normal">Triple A Catfish - 250g</p>
-<p class="text-text-muted-light dark:text-text-muted-dark font-body text-sm font-normal leading-normal">$15.00</p>
+<p class="text-text-light dark:text-text-dark font-body text-base font-medium leading-normal">{{$product->name}}</p>
+<p class="text-text-muted-light dark:text-text-muted-dark font-body text-sm font-normal leading-normal">{{$product->price}}</</p>
 </div>
 <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/10 dark:bg-white/10 text-primary dark:text-secondary font-body text-sm font-bold leading-normal tracking-[0.015em]">
 <span class="truncate">Add to Cart</span>
 </button>
 </div>
 </div>
-<div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-white dark:bg-background-dark shadow-[0_2px_8px_rgba(0,0,0,0.05)] dark:border dark:border-white/10 min-w-60">
-<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-t-xl flex flex-col" data-alt="Packaging for 500g oven-dried catfish" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAK8OU-ojbGzblHrtkw-tgsYl3er9-2VhDhMmjrlNoaTe6OUe3Ha0N8hZ3R2yxoPwBDewgW-zshP_AzFB2FD_iYKuzygEeqbuwwlLqAgqca7LDFCjkNdkA8h8sX7wU8ZHHDmk9jKgSlapraVtV6uyRVH_JHVauE5As-cOUff4QMfk_2SqH5Dc3IkhLeZoLxIpEkgqVXpXYB776uD2Sgc5cc3lWxCsbvS4GcH7Wfha_XTTbiw8UpqgzRH32hMz6qxmeYCGBR6kYxsEE");'></div>
-<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
-<div>
-<p class="text-text-light dark:text-text-dark font-body text-base font-medium leading-normal">Triple A Catfish - 500g</p>
-<p class="text-text-muted-light dark:text-text-muted-dark font-body text-sm font-normal leading-normal">$28.00</p>
-</div>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/10 dark:bg-white/10 text-primary dark:text-secondary font-body text-sm font-bold leading-normal tracking-[0.015em]">
-<span class="truncate">Add to Cart</span>
-</button>
-</div>
-</div>
-<div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-white dark:bg-background-dark shadow-[0_2px_8px_rgba(0,0,0,0.05)] dark:border dark:border-white/10 min-w-60">
-<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-t-xl flex flex-col" data-alt="Packaging for 1kg oven-dried catfish" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDg9cFcsQliqjngeo7Opg5StrSCZQ92caiyGzhFUDa-lwiPpPYwY9PDIdbvJO1YvNVJgwGXmaZnPwWU39RTPrTUEUGMHR2KvqDvu2obBA4oZwj4P5eP-Pao7GgfRyc9-q6AZcB2aT5FnFmbXd7qOTewQy8nYQ7IGAxpSNiKYtGgeRJv3MnE7WbuUU28Nk7TaGHj_oYv7gpmp6py-3FhDeccxG55opHv1zNYlGPerrF20VJyI1SwwysYB8E0VZDW6mQ7bx_jmdj_ibk");'></div>
-<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
-<div>
-<p class="text-text-light dark:text-text-dark font-body text-base font-medium leading-normal">Triple A Catfish - 1kg</p>
-<p class="text-text-muted-light dark:text-text-muted-dark font-body text-sm font-normal leading-normal">$50.00</p>
-</div>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/10 dark:bg-white/10 text-primary dark:text-secondary font-body text-sm font-bold leading-normal tracking-[0.015em]">
-<span class="truncate">Add to Cart</span>
-</button>
-</div>
-</div>
+@endforeach
 </div>
 </div>
 <!-- Why Choose Us Section -->

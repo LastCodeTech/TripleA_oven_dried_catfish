@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class TripleAController extends Controller
 {
     public function home(){
-        return view('home');
+        $products=Product::all();
+        return view('home',compact('products'));
     }
     public function shop(){
         return view('shop');

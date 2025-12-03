@@ -191,6 +191,35 @@
 </div>
 </div>
 
+<!-- FAQ Section -->
+<section id="faq" class='py-10 px-20'>
+<h3 class="px-4 pb-4 text-xl font-bold leading-tight tracking-tight">Frequently Asked Questions</h3>
+<div class="flex flex-col gap-2">
+<details class="group rounded-xl border border-border-light bg-card-light p-4 shadow-sm open:shadow-md dark:border-border-dark dark:bg-card-dark">
+<summary class="flex cursor-pointer list-none items-center justify-between font-semibold">
+              What are your delivery options?
+<i class="fa-solid fa-angle-down transition-transform duration-300 group-open:rotate-180"></i>
+            </summary>
+<p class="mt-4 text-text-light/80 dark:text-text-dark/80">We offer standard and express delivery options. Standard delivery takes 3-5 business days, while express delivery takes 1-2 business days. All orders are packed in hygienic, temperature-controlled packaging to ensure freshness.</p>
+</details>
+<details class="group rounded-xl border border-border-light bg-card-light p-4 shadow-sm open:shadow-md dark:border-border-dark dark:bg-card-dark">
+<summary class="flex cursor-pointer list-none items-center justify-between font-semibold">
+              Is the packaging hygienic?
+<i class="fa-solid fa-angle-down transition-transform duration-300 group-open:rotate-180"></i>
+</summary>
+<p class="mt-4 text-text-light/80 dark:text-text-dark/80">Absolutely. Hygiene is our top priority. Our oven-dried catfish is vacuum-sealed in food-grade, BPA-free packaging under strict sanitary conditions to guarantee maximum freshness and safety.</p>
+</details>
+<details class="group rounded-xl border border-border-light bg-card-light p-4 shadow-sm open:shadow-md dark:border-border-dark dark:bg-card-dark">
+<summary class="flex cursor-pointer list-none items-center justify-between font-semibold">
+              Can I order in bulk?
+<i class="fa-solid fa-angle-down transition-transform duration-300 group-open:rotate-180"></i>
+</summary>
+<p class="mt-4 text-text-light/80 dark:text-text-dark/80">Yes, we offer special pricing for bulk orders. Please contact us directly via email or the contact form with your requirements, and our sales team will get back to you with a custom quote.</p>
+</details>
+</div>
+</section>
+
+
 <div class="bg-primary/20 dark:bg-primary/10 p-8 m-4 rounded-lg flex flex-col items-center text-center gap-4">
 <h3 class="text-xl font-bold">Join Our Newsletter</h3>
 <p class="text-gray-600 dark:text-gray-300">Get exclusive offers and updates delivered straight to your inbox.</p>

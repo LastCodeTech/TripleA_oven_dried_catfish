@@ -33,4 +33,10 @@ class TripleAController extends Controller
     public function checkout(){
         return view('checkout');
     }
+    public function support(){
+        return view('support');
+    }
+    public function faq(){
+        return view('home');
+    }
 }

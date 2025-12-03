@@ -19,6 +19,8 @@ Route::get('/shop',[TripleAController::class,'shop'])->name('shop');
 Route::get('/about',[TripleAController::class,'about'])->name('about');
 Route::get('/blog',[TripleAController::class,'blog'])->name('blog');
 Route::get('/checkout',[TripleAController::class,'checkout'])->name('checkout');
+Route::get('/support',[TripleAController::class,'support'])->name('support');
+Route::get('/faq',[TripleAController::class,'faq'])->name('faq');
 
 
 });

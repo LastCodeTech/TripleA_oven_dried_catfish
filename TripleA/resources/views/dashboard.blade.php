@@ -108,13 +108,13 @@
 <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Update payment info</p>
 </div>
 </div>
-<div class="flex flex-1 gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#1C2C3A] p-4 flex-col">
+<a href="{{route('contact')}}"><div class="flex flex-1 gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#1C2C3A] p-4 flex-col">
 <span class="material-symbols-outlined text-earthy-brown text-2xl">help</span>
 <div class="flex flex-col gap-1">
 <h2 class="text-deep-ocean-blue dark:text-white text-base font-bold leading-tight">Help &amp; Support</h2>
 <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Get help</p>
 </div>
-</div>
+</div></a>
 <form action="{{route('logout.process')}}" method="POST">
         @csrf
 <button class="flex flex-1 gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#1C2C3A] p-4 flex-col">

@@ -61,7 +61,7 @@
 <p class="mt-1 text-base text-gray-600 dark:text-gray-400">Premium quality, fresh and hygienic.</p>
 </div>
 <!-- Chips / Filters -->
-<div class="sticky top-[61px] z-10 flex gap-3 overflow-x-auto bg-background-light/80 px-4 pb-3 pt-2 backdrop-blur-sm dark:bg-background-dark/80">
+{{-- <div class="sticky top-[61px] z-10 flex gap-3 overflow-x-auto bg-background-light/80 px-4 pb-3 pt-2 backdrop-blur-sm dark:bg-background-dark/80">
 <button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/20 px-4 text-black dark:text-white dark:bg-primary/30">
 <p class="text-sm font-medium">Weight</p>
 <span class="material-symbols-outlined text-lg">expand_more</span>
@@ -74,7 +74,7 @@
 <p class="text-sm font-medium">Category</p>
 <span class="material-symbols-outlined text-lg">expand_more</span>
 </button>
-</div>
+</div> --}}
 <!-- Image Grid -->
 <div class="grid grid-cols-2 gap-4 p-4">
 <div data-trig="fade-up" class="flex flex-col gap-2 rounded-xl bg-white p-3 shadow-sm dark:bg-gray-800">
@@ -160,9 +160,6 @@
 
 </div>
 
-  <script src="https://cdn.jsdelivr.net/gh/sh4hids/trigjs/dist/trig.min.js">
-  Trig.init();
-   alert('hello');
-    </script>
+
 
 </body></html>

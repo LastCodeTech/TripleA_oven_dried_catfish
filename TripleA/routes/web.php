@@ -11,8 +11,7 @@ Route::post('/login.process',[AuthController::class,'loginProcess'])->name('logi
 Route::get('/blog',[TripleAController::class,'blog'])->name('blog');
 Route::get('/',[TripleAController::class,'home'])->name('home');
 Route::post('/contactmsg.process',[TripleAController::class,'contactmsgProcess'])->name('contactmsg.process');
-
-
+Route::post('/cart',[TripleAController::class,'cart'])->name('cart');
 
 Route::middleware('auth')->group(function(){
 Route::get('/cart',[TripleAController::class,'cart'])->name('cart');

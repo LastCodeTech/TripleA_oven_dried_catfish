@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TripleAController;
 use Illuminate\Support\Facades\Route;
 Route::get('/sign_up',[AuthController::class,'signup'])->name('signup');
+Route::get('/header',[AuthController::class,'header'])->name('header');
 Route::get('/login',[AuthController::class,'login'])->name('login');
 Route::post('/signup.process',[AuthController::class,'signupProcess'])->name('signup.process');
 Route::post('/logout.process',[AuthController::class,'logoutProcess'])->name('logout.process');
@@ -11,7 +12,9 @@ Route::post('/login.process',[AuthController::class,'loginProcess'])->name('logi
 Route::get('/blog',[TripleAController::class,'blog'])->name('blog');
 Route::get('/',[TripleAController::class,'home'])->name('home');
 Route::post('/contactmsg.process',[TripleAController::class,'contactmsgProcess'])->name('contactmsg.process');
-Route::post('/cart',[TripleAController::class,'cart'])->name('cart');
+Route::post('/cart/add',[TripleAController::class,'cartAdd'])->name('cart.add');
+Route::post('/cart/update/{id}',[TripleAController::class,'UpdateCartQty'])->name('UpdateCartQty');
+Route::delete('/cart/delete/{id}',[TripleAController::class,'deleteItem'])->name('deleteItem');
 
 Route::middleware('auth')->group(function(){
 Route::get('/cart',[TripleAController::class,'cart'])->name('cart');

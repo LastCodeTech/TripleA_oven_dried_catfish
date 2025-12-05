@@ -49,58 +49,46 @@
     </style>
 <style>
     body {
-      min-height: max(884px, 100dvh);
+      /* min-height: max(884px, 100dvh); */
     }
   </style>
   </head>
 <body class="font-display bg-background-light dark:bg-background-dark">
     <x-header />
 <div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
-<main class="flex-grow pb-56"> <!-- Padding bottom to avoid overlap with sticky footer -->
+<main class="flex-grow pb-56 mb-20"> <!-- Padding bottom to avoid overlap with sticky footer -->
 <!-- Cart Items List -->
 <div class="flex flex-col gap-4 pt-6 px-4">
-<!-- List Item 1 -->
+    @foreach($viewCarts as $viewCart)
+    <!-- List Item 1 -->
 <div class="flex items-center gap-4 bg-neutral-soft-light dark:bg-neutral-soft-dark p-3 rounded-xl shadow-sm">
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-20 shrink-0" data-alt="Smoked Headless Catfish in a package" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA6DHxVj5VqSMDYsJxjJEal3Q2197zzm5Pp-x4GDNpmitbiihBHPIQLD6GIurvr-Pbo9Kgdzt90bLrv8WIYlBpkkVzEGP77OQ09bw_UIl_fZYHOmcTLtbK6lMvmM5cTYm17r5fhZnlNingquaRYjqkiXOr6bJR72ixEX4g8OyF7G9lyDHe-g8HWZOR1X6PuOU2kuNkNU_cipCjcSqWeinKJLjYQkr3cIxiONhsOqjN46PXo77GbAcWMAPCUJ6ZAgp1Qi8DjurO1xHM");'></div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-20 shrink-0" data-alt="Smoked Headless Catfish in a package" style='background-image: url("{{Storage::disk('public')->url($viewCart->product['image'])}}");'></div>
 <div class="flex-grow">
 <div class="flex flex-col justify-center">
-<p class="text-neutral-text-light dark:text-neutral-text-dark text-base font-semibold leading-normal line-clamp-1">Smoked Headless Catfish</p>
-<p class="text-neutral-text-light/70 dark:text-neutral-text-dark/70 text-sm font-normal leading-normal line-clamp-2">250g</p>
-<p class="text-secondary text-base font-bold mt-1">$25.00</p>
+<p class="text-neutral-text-light dark:text-neutral-text-dark text-base font-semibold leading-normal line-clamp-1">{{$viewCart->product['name']}}</p>
+<p class="text-neutral-text-light/70 dark:text-neutral-text-dark/70 text-sm font-normal leading-normal line-clamp-2">{{$viewCart->product['size']}}</p>
+<p class="text-secondary text-base font-bold mt-1">{{$viewCart->product['price']}}</p>
 </div>
 </div>
 <div class="flex flex-col items-end justify-between self-stretch shrink-0">
-<button class="text-[#1a4c42] ">
+<form action="{{route('deleteItem',$viewCart->id)}}" method="post">
+    @csrf
+    @method('DELETE')
+    <button class="text-[#1a4c42] ">
 <i class="fa-solid fa-trash-can text-xl"></i>
 </button>
+</form>
+<form action="{{route('UpdateCartQty',$viewCart->id)}}"  method="POST">
+    @csrf
+    {{-- @method('PUT') --}}
 <div class="flex items-center gap-2 text-neutral-text-light dark:text-neutral-text-dark">
-<button class="text-lg font-medium leading-normal flex size-7 items-center justify-center rounded-full bg-neutral-subtle-light dark:bg-neutral-subtle-dark cursor-pointer">-</button>
-<span class="text-base font-medium leading-normal w-4 text-center">2</span>
-<button class="text-lg font-medium leading-normal flex size-7 items-center justify-center rounded-full bg-neutral-subtle-light dark:bg-neutral-subtle-dark cursor-pointer">+</button>
+<button name='action' value="decrease" class="text-lg font-medium leading-normal flex size-7 items-center justify-center rounded-full bg-neutral-subtle-light dark:bg-neutral-subtle-dark cursor-pointer">-</button>
+<span class="text-base font-medium leading-normal w-4 text-center">{{$viewCart->quantity}}</span>
+<button name="action" value="increase" class="text-lg font-medium leading-normal flex size-7 items-center justify-center rounded-full bg-neutral-subtle-light dark:bg-neutral-subtle-dark cursor-pointer">+</button>
+</div></form>
 </div>
 </div>
-</div>
-<!-- List Item 2 -->
-<div class="flex items-center gap-4 bg-neutral-soft-light dark:bg-neutral-soft-dark p-3 rounded-xl shadow-sm">
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-20 shrink-0" data-alt="Spicy Oven-Dried Catfish in a package" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD2wlOGWW3qOoTjRaKRggTbklSfcyYDs6XQdYBctTFrCN3IhwB-1xOa15iOdG0Waa7lvSTmHYPRYNEuh9udCP01z2Gt1fN6Ym0TJfeZ5Z34Z26Omto9jw513fJZpcqMBGtN7HXbHQHN6YyNAFWb69GRo-XvZeJDOozQxGVMP2pwW1os6NYH8wjma90bGlRlyp9l3yz2WQtxx9GN_bJNbMrZ2O_tIqRDVUfDE0W6QL2IaocjrX0ykEbo5VW44giknvVeRUQgIrHKhD0");'></div>
-<div class="flex-grow">
-<div class="flex flex-col justify-center">
-<p class="text-neutral-text-light dark:text-neutral-text-dark text-base font-semibold leading-normal line-clamp-1">Spicy Oven-Dried Catfish</p>
-<p class="text-neutral-text-light/70 dark:text-neutral-text-dark/70 text-sm font-normal leading-normal line-clamp-2">500g</p>
-<p class="text-secondary text-base font-bold mt-1">$45.00</p>
-</div>
-</div>
-<div class="flex flex-col items-end justify-between self-stretch shrink-0">
-<button class="text-[#1a4c42] ">
-<i class="fa-solid fa-trash-can text-xl"></i>
-</button>
-<div class="flex items-center gap-2 text-neutral-text-light dark:text-neutral-text-dark">
-<button class="text-lg font-medium leading-normal flex size-7 items-center justify-center rounded-full bg-neutral-subtle-light dark:bg-neutral-subtle-dark cursor-pointer">-</button>
-<span class="text-base font-medium leading-normal w-4 text-center">1</span>
-<button class="text-lg font-medium leading-normal flex size-7 items-center justify-center rounded-full bg-neutral-subtle-light dark:bg-neutral-subtle-dark cursor-pointer">+</button>
-</div>
-</div>
-</div>
+    @endforeach
 </div>
 </main>
 <!-- Sticky Footer with Order Summary and CTA -->

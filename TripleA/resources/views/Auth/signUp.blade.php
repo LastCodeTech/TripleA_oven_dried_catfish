@@ -57,7 +57,7 @@
   </style>
 <style>
     body {
-      min-height: max(884px, 100dvh);
+      /* min-height: max(884px, 100dvh); */
     }
   </style>
   </head>
@@ -66,12 +66,9 @@
 @if (session()->has('message'))
     <h2 class="text-base md:xl font-semibold capitalize text-red-600 pt-2">{{session('message')}}</h2>
 @endif
-<div class="flex w-full max-w-md flex-1 flex-col justify-center px-6 py-12">
+<div class="flex w-full max-w-md flex-1 flex-col justify-center px-6 ">
 <div class="flex justify-center pb-8">
-<div class="text-center gap-2 text-2xl md:text-5xl ">
-<i class="fa-solid fa-fish-fins fa-bounce text-primary dark:text-accent "></i>
-<h2 class="font-display font-bold tracking-wide text-text-light dark:text-text-dark">Triple A Oven Dried Catfish</h2>
-</div>
+<img src="{{asset('images/logo.png')}}" class="h-[150px] w-[170px]">
 </div>
 <h1 class="text-text-light dark:text-text-dark font-display tracking-tight text-2xl md:text-4xl font-thin leading-tight text-center pb-8">Create your account</h1>
 <form action="{{route('signup.process')}}" method="POST">
@@ -144,7 +141,7 @@
                 </button>
 </div>
 <div class="h-8"></div>
-<div class="text-center">
+<div class="text-center pb-8">
 <p class="text-text-light dark:text-text-dark text-base font-normal">
                     Already have an account? <a class="font-bold text-primary dark:text-accent underline" href="{{route('login')}}">Log In</a>
 </p>

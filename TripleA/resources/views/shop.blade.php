@@ -62,18 +62,22 @@
 </div>
 
 <!-- Image Grid -->
-<div class="grid grid-cols-2 gap-4 p-4">
+<div class="grid md:grid-cols-3 grid-cols-2 gap-4 p-4">
 @foreach ($products as $product)
     <div class="flex flex-col gap-2 rounded-xl bg-white p-3 shadow-sm dark:bg-gray-800">
 <div class="aspect-[3/4] w-full rounded-lg bg-cover bg-center bg-no-repeat" data-alt="Large single piece of whole oven-dried catfish." style='background-image: url("{{Storage::disk('public')->url($product->image)}}");'></div>
-<div>
-<p class="font-medium text-black dark:text-white">{{$product->name}}</p>
-<p class="text-sm text-gray-500 dark:text-gray-400">{{$product->size}}</p>
+<div class="md:px-8">
+<div class="block text-center capitalize md:flex md:justify-between ">
+  <p class="font-medium text-black dark:text-white">{{$product->name}}</p>
+<p class="text-md text-gray-500 dark:text-gray-400">{{$product->size}}</p></div>
 <div class="mt-2 flex items-center justify-between">
 <p class="text-base font-bold text-black dark:text-white">{{$product->price}}</p>
-<button class="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white">
-<span class="material-symbols-outlined text-xl">add</span>
-</button>
+<form method="post" action="{{route('cart.add')}}">
+  @csrf
+  <input class="hidden" name="product_id" value="{{ $product->id }}">
+  <input type='submit' class="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white"
+value='+'
+/></form>
 </div>
 </div>
 </div>

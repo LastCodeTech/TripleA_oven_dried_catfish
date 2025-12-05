@@ -48,18 +48,19 @@
     </style>
 <style>
     body {
-      min-height: max(884px, 100dvh);
+      /* min-height: max(884px, 100dvh); */
     }
   </style>
   </head>
 <body class="font-sans">
 <div class="relative flex min-h-screen w-full flex-col items-center bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
-<div class="flex w-full max-w-md flex-1 flex-col justify-center px-6 py-12">
+<div class="flex w-full max-w-md flex-1 flex-col justify-center px-6 ">
 <!-- Logo Container -->
-<div class="flex justify-center pb-8">
+<div class="flex justify-center pb-1">
 <div class="text-center gap-2 text-2xl md:text-5xl ">
-<i class="fa-solid fa-fish-fins fa-bounce text-primary dark:text-accent "></i>
-<h2 class="font-display font-bold tracking-wide text-text-light dark:text-text-dark">Triple A Oven Dried Catfish</h2>
+{{-- <i class="fa-solid fa-fish-fins fa-bounce text-primary dark:text-accent "></i>
+<h2 class="font-display font-bold tracking-wide text-text-light dark:text-text-dark">Triple A Oven Dried Catfish</h2> --}}
+<img src="{{asset('images/logo.png')}}" class="h-[150px] w-[170px]">
 </div>
 </div>
 <!-- Headline Text -->

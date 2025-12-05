@@ -9,9 +9,10 @@ class Cart extends Model
     protected $fillable = [
         'quantity',
         'product_id',
+        'user_id'
     ];
 
     public function product(){
-        $this->belongsTo(Product::class);
+       return $this->belongsTo(Product::class);
     }
 }

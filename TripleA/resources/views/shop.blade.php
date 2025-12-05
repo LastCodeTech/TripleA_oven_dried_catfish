@@ -59,6 +59,20 @@
 <div class="px-4 pt-6 pb-4">
 <h2 class="text-3xl font-bold tracking-tight text-black dark:text-white">Oven Dried Catfish</h2>
 <p class="mt-1 text-base text-gray-600 dark:text-gray-400">Premium quality, fresh and hygienic.</p>
+{{-- toast --}}
+@if(session()->has('message'))
+<div class='flex justify-between'>
+  <div></div>
+  <div class="bg-green-300 py-2 border-2 border-green-800 my-1 px-2 rounded-xl"> <h2 class='text-xl'>{{session('message')}}</h2></div>
+</div>
+@endif
+@if(session()->has('error'))
+<div class='flex justify-between'>
+  <div></div>
+  <div class="bg-red-300 py-2 border-2 border-red-800 my-1 px-2 rounded-xl"> <h2 class='text-xl'>{{session('error')}}</h2></div>
+</div>
+@endif
+
 </div>
 
 <!-- Image Grid -->

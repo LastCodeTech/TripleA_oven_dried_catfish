@@ -135,24 +135,19 @@
 <div class="rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-4">
 <h2 class="font-display text-xl font-bold mb-4">Order Summary</h2>
 <div class="space-y-4">
+
+  @foreach($items as $item)
 <!-- Product Item -->
 <div class="flex items-center gap-4">
-<img class="h-16 w-16 rounded-lg object-cover" data-alt="A close-up of oven-dried catfish fillets on a wooden board" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZapxJbfOaMMyzzza0q_8pfJcvPZhIpe2Rb52sxtUzfbXMuLl7yYIUUEzGskjXUyMAUdErf2dISzRw73LjULUQdOyMxEhvQDo6dbZSofJnLIvod5U2Sakg1vEbgRnyZKcK_rNXZtHNdlBCemC8QC8lVxUP_MzA7B9WgQk0kemvhYSRT0Mo1ZlcCYI7AGPEo5WlhirW-K1BzAP5G6EgUUR_GCBLr7t69w3tM2i4QxtHd_6k50QXroS7NBt3zg89gRjD5nTPqrv2f-s"/>
+<img class="h-16 w-16 rounded-lg object-cover" data-alt="A close-up of oven-dried catfish fillets on a wooden board" src="{{Storage::disk('public')->url($item->product['image'])}}"/>
 <div class="flex-1">
-<p class="font-semibold text-text-light dark:text-text-dark">Oven Dried Catfish</p>
-<p class="text-sm text-gray-500 dark:text-gray-400">Qty: 2</p>
+<p class="font-semibold text-text-light dark:text-text-dark">{{$item->product['name']}}</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Qty: {{$item->quantity}}</p>
 </div>
-<p class="font-semibold text-text-light dark:text-text-dark">$25.00</p>
+<p class="font-semibold text-text-light dark:text-text-dark">{{$item->product['price']}}</p>
 </div>
-<!-- Product Item -->
-<div class="flex items-center gap-4">
-<img class="h-16 w-16 rounded-lg object-cover" data-alt="Smoked and dried catfish arranged neatly in a basket" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlN238_lRDP3zkXgDObi9Gb2Hc5mVJI72dtNYuSYE614U315jIoqCFAbGNUfO8rHiNGb_LVmL2WR9K-Hi1CkDvxmJJYfXQHNc-vcoPxxhF-nPd3JuDabgS4KEmt8S_6FRKjNC1VzY-YUti0ttNp9h_WlBZ48q9uwQLM7mE9Lh_rCk-bqVQgWFFBLEZnwzzTcE2d7toz3BjHZddK5q0c1zWIU49T2mBvb3hubtHri6Imh_9t73SbZbZC_505Gud9M2zZfnzscS6Td4"/>
-<div class="flex-1">
-<p class="font-semibold text-text-light dark:text-text-dark">Smoked Catfish Chunks</p>
-<p class="text-sm text-gray-500 dark:text-gray-400">Qty: 1</p>
-</div>
-<p class="font-semibold text-text-light dark:text-text-dark">$15.50</p>
-</div>
+  @endforeach
+
 </div>
 <div class="my-4 h-px bg-border-light dark:bg-border-dark"></div>
 <div class="space-y-2">

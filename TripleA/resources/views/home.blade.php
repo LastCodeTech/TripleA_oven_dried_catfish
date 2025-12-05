@@ -55,8 +55,11 @@
 <div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
 <!-- Top App Bar -->
 
-@if (session()->has('message'))
-    <h2 class="text-base md:xl font-semibold capitalize text-red-600 pt-2">{{session('message')}}</h2>
+  @if(session()->has('message'))
+<div class='flex justify-between'>
+  <div></div>
+  <div class="bg-green-300 py-2 border-2 border-green-800 my-1 px-2 rounded-xl"> <h2 class='text-xl'>{{session('message')}}</h2></div>
+</div>
 @endif
 <!-- Hero Section -->
 <div class="@container">

@@ -52,11 +52,18 @@
 <section class="text-center">
 <h2 class="text-3xl font-bold tracking-tight text-text-light dark:text-text-dark">Contact Us</h2>
 <p class="mt-2 text-base text-text-light/80 dark:text-text-dark/80">We're here to help. Reach out with any questions.</p>
-@if (session()->has('message'))
-    <h1 class="text-sm md:text-md py-2 capitalize text-green-600">{{session('message')}}</h1>
+{{-- toast --}}
+@if(session()->has('message'))
+<div class='flex justify-between'>
+  <div></div>
+  <div class="bg-green-300 py-2 border-2 border-green-800 my-1 px-2 rounded-xl"> <h2 class='text-xl'>{{session('message')}}</h2></div>
+</div>
 @endif
-@if (session()->has('error'))
-    <h1 class="text-sm md:text-md py-2 capitalize text-red-600">{{session('message')}}</h1>
+@if(session()->has('error'))
+<div class='flex justify-between'>
+  <div></div>
+  <div class="bg-red-300 py-2 border-2 border-red-800 my-1 px-2 rounded-xl"> <h2 class='text-xl'>{{session('error')}}</h2></div>
+</div>
 @endif
 </section>
 <!-- Contact Form -->

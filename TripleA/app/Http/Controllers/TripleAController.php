@@ -47,17 +47,17 @@ class TripleAController extends Controller
         return view('dashboard');
     }
     public function checkout(){
-        return view('checkout');
+         $items=Cart::where('user_id',Auth::id())
+                    ->with('product')
+                    ->get();
+        return view('checkout',compact('items'));
     }
    
     public function profile(){
         return view('profile');
     }
     public function order(){
-        $orders=Cart::where('user_id',Auth::id())
-                    ->with('product')
-                    ->get();
-        return view('order',compact('orders'));
+        return view('order');
     }
     public function contactmsgProcess(Request $request){
        $validate =$request->validate([
@@ -84,7 +84,7 @@ class TripleAController extends Controller
         if($cartItem){
            $cartItem->quantity+=1;
             $cartItem->Save();
-         return redirect()->route('shop')->with('success', 'Quantity increased!');
+         return redirect()->route('shop')->with('message', 'Quantity increased!');
         }
         else {
     Cart::create([
@@ -92,7 +92,7 @@ class TripleAController extends Controller
         'product_id' => $productId,
         'quantity' => 1
     ]);
-    return redirect()->route('shop')->with('success', 'Item added to cart!');
+    return redirect()->route('shop')->with('message', 'Item added to cart!');
 }}
 
 public function UpdateCartQty(Request $request,$id){

@@ -63,14 +63,14 @@
   </head>
 <body class="font-sans">  
 <div class="relative flex min-h-screen w-full flex-col items-center bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
-@if (session()->has('message'))
-    <h2 class="text-base md:xl font-semibold capitalize text-red-600 pt-2">{{session('message')}}</h2>
-@endif
 <div class="flex w-full max-w-md flex-1 flex-col justify-center px-6 ">
 <div class="flex justify-center pb-8">
 <img src="{{asset('images/logo.png')}}" class="h-[150px] w-[170px]">
 </div>
 <h1 class="text-text-light dark:text-text-dark font-display tracking-tight text-2xl md:text-4xl font-thin leading-tight text-center pb-8">Create your account</h1>
+@if(session()->has('message'))
+<h2 class='text-md capitalize text-red-400 capitalize text:xl'>{{session('message')}}</h2>
+@endif
 <form action="{{route('signup.process')}}" method="POST">
     @csrf
 <div class="w-full">

@@ -57,17 +57,13 @@
 <div class="flex w-full max-w-md flex-1 flex-col justify-center px-6 ">
 <!-- Logo Container -->
 <div class="flex justify-center pb-1">
-<div class="text-center gap-2 text-2xl md:text-5xl ">
-{{-- <i class="fa-solid fa-fish-fins fa-bounce text-primary dark:text-accent "></i>
-<h2 class="font-display font-bold tracking-wide text-text-light dark:text-text-dark">Triple A Oven Dried Catfish</h2> --}}
 <img src="{{asset('images/logo.png')}}" class="h-[150px] w-[170px]">
-</div>
 </div>
 <!-- Headline Text -->
 <div class="pb-8 text-center">
 <h1 class="text-text-light dark:text-text-dark font-display tracking-tight text-2xl md:text-4xl font-thin leading-tight  ">Welcome Back</h1>
-@if (session()->has('message'))
-    <h2 class="text-base md:xl font-semibold capitalize text-red-600 pt-2">{{session('message')}}</h2>
+@if(session()->has('message'))
+<h2 class='text-md capitalize text-red-400 capitalize text:xl'>{{session('message')}}</h2>
 @endif
 </div>
 <!-- Form Container -->

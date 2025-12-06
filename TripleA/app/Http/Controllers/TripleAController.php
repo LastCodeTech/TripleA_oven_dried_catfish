@@ -38,10 +38,17 @@ class TripleAController extends Controller
         return view('contact');
     }
     public function cart(){
+        $product_total=0;
         $viewCarts=Cart::where('user_id',Auth::id())
                     ->with('product')
                     ->get();
-        return view('cart',compact('viewCarts'));
+        foreach($viewCarts as $cart){
+            $product_total += (int)$cart->product->price * $cart->quantity;
+            // $product_quantity=$cart->quantity;
+            // $total_cost=$product_total*$product_quantity;
+            
+        }
+        return view('cart',compact('viewCarts','product_total'));
     }
     public function dashboard(){
         return view('dashboard');

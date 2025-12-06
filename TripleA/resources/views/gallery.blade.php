@@ -98,7 +98,7 @@
 </div>
 </div>
 <div class="group relative col-span-2 cursor-pointer overflow-hidden rounded-lg shadow-md transition-shadow hover:shadow-xl" onclick="openLightbox('https://lh3.googleusercontent.com/aida-public/AB6AXuDrHYZjDGNQrBNneb8q2K-ucB8uql81qZQiDU9gX3vqfSlvL507k-uDSUaawY9InzWud9G6lE5uOLmxsUWeGd1DUBrv2yVrfB4x6kz5l0owIOViIVipyarxSS8lCYv_9__bsgTO6tN0dq7qIRq-Cjznu-ypuS0dtzZhlvi0icRWPd2nugkpssisjo_dA0mqToS4LkqnC3lVg7yLSiC4G6q986ifz3SiQf9dLLIX4VFf12XnVo1PAWNUGU_lIZvkNMD1lOqDzyciIp8V', 'Beautifully golden-brown oven-dried catfish after processing')">
-<img alt="Beautifully golden-brown oven-dried catfish after processing" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrHYZjDGNQrBNneb8q2K-ucB8uql81qZQiDU9gX3vqfSlvL507k-uDSUaawY9InzWud9G6lE5uOLmxsUWeGd1DUBrv2yVrfB4x6kz5l0owIOViIVipyarxSS8lCYv_9__bsgTO6tN0dq7qIRq-Cjznu-ypuS0dtzZhlvi0icRWPd2nugkpssisjo_dA0mqToS4LkqnC3lVg7yLSiC4G6q986ifz3SiQf9dLLIX4VFf12XnVo1PAWNUGU_lIZvkNMD1lOqDzyciIp8V"/>
+<img alt="Beautifully golden-brown oven-dried catfish after processing" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" src="{{asset('images/catfish image4.jpg')}}"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
 <div class="absolute bottom-0 left-0 p-3">
 <p class="text-sm font-semibold text-white">After Processing</p>
@@ -106,6 +106,7 @@
 </div>
 </div>
 </main>
+<x-footer />
 </div>
 <script>
   function openLightbox(src, alt) {

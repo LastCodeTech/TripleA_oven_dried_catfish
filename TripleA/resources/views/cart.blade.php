@@ -107,7 +107,7 @@
 <div class="border-t border-dashed border-neutral-subtle-light dark:border-neutral-subtle-dark my-3"></div>
 <div class="flex justify-between gap-x-6">
 <p class="text-neutral-text-light dark:text-neutral-text-dark text-base font-bold leading-normal">Total</p>
-<p class="text-secondary text-xl font-bold leading-normal text-right">$95.00</p>
+<p class="text-secondary text-xl font-bold leading-normal text-right">&#x20A6;{{number_format( $product_total,2)}}</p>
 </div>
 </div>
  <a href="{{route('checkout')}}"><button class="mt-5 w-full  text-white bg-[#1a4c42] dark:text-primary font-bold py-4 px-5 rounded-xl text-base leading-tight tracking-tight shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-primary/50 dark:focus:ring-secondary/50 focus:ring-offset-2 dark:focus:ring-offset-background-dark">

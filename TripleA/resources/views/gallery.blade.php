@@ -77,21 +77,21 @@
 </div>
 </div>
 <div class="group relative cursor-pointer overflow-hidden rounded-lg shadow-md transition-shadow hover:shadow-xl" onclick="openLightbox('image-4c6e919b5d384ac980907e2a96a583e7', 'Fresh, raw catfish prepared for the oven')">
-<img alt="Fresh, raw catfish prepared for the oven" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcORxpj3wjYs4_DpvotudSuvNqt7C_W3cz4aMEtak5ouD7eVu-v5ya-oAQUQ2PzeZACmtVdEQwEAoRD0rXnXa-G3y07tM5ie8UnUAmk71sTsX5muLcTfzNosHrN4EOw9dWlrkXCGZnLRH6QTNTJRNardw7Kd9qBNwJvBzhH0jdiBM_nkUjHkIVMdvxeTyZGr0Hy2kH_5VYop3892D_ca11SfhbuX9_TXdJ1mmSAzJ5hQUEaDHkgzSrJYerZ7A7MWw-CKDBzia5SDGg"/>
+<img alt="Fresh, raw catfish prepared for the oven" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" src="{{asset('images/catfish image9.jpg')}}"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
 <div class="absolute bottom-0 left-0 p-3">
 <p class="text-sm font-semibold text-white">Before Processing</p>
 </div>
 </div>
 <div class="group relative cursor-pointer overflow-hidden rounded-lg shadow-md transition-shadow hover:shadow-xl" onclick="openLightbox('image-7848c7d3a0424564b73b22b7245749f7', 'State-of-the-art oven used for drying catfish')">
-<img alt="State-of-the-art oven used for drying catfish" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5GRTooh2Xwt6Llox8BxEJ0YOj0pCb1V5oNLqcl5yssawtZ9b-Isk980HXcK2imyLStd5kE2Gz-890JyhDcbZR7m93MppFMK-T9DgjYUZl8WmgEIo2IwyZW0tVevIkSKAOJ9RO6icD9r1Q2M7gvnzZToauLjjMCwWUr7cAm2QpLlYqzQ7MW-aZszQIfcRpbq1frMD_nBsGAoWDSh-EENeYw9FyR9zKj2-dAL_d8-2Cs-JtXwKLK4RnhuR5jQXhkZ3Td6sQM0e8VS3S"/>
+<img alt="State-of-the-art oven used for drying catfish" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" src="{{asset('images/oven1.jpg')}}"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
 <div class="absolute bottom-0 left-0 p-3">
 <p class="text-sm font-semibold text-white">Our Oven</p>
 </div>
 </div>
 <div class="group relative col-span-2 cursor-pointer overflow-hidden rounded-lg shadow-md transition-shadow hover:shadow-xl" onclick="openLightbox('image-9f237191147047f3b33454743b006cf0', 'Large bulk order of packaged oven-dried catfish')">
-<img alt="Large bulk order of packaged oven-dried catfish" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBriTa7f8vcfQWWmhL2rTvoWbNi_MFw5ZbBVafhmweXHGJhO57eS58CYK7BqVbR0KVLs5m7oHKv6PjiVMySQrR4kW7joHx2kEVc8STyyfQPmx9uUD1FQbsmhQR-tIRI7l-zQc0wYeML0JRE7agafKFrKVLBrXdZINv1sWl6FImFbNmMXaN1Hu6_MD-tB5KcDZNhg8P3PSm_I82CLcnBWIsDZCeOAghE8MIqh4Ub0ZvMamPleolx6dPgfn_MkKd6VwzXUzLthUAjSAWu"/>
+<img alt="Large bulk order of packaged oven-dried catfish" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" src="{{asset('images/catfish image15.jpg')}}"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
 <div class="absolute bottom-0 left-0 p-3">
 <p class="text-sm font-semibold text-white">Bulk Orders</p>

@@ -125,5 +125,6 @@
 </div>
 </section>
 </main>
+<x-footer />
 </div>
 </body></html>

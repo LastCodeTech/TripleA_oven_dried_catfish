@@ -83,4 +83,5 @@
 </section>
 @endforeach
 </div>
+<x-footer />
 </body></html>

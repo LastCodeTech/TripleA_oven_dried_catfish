@@ -98,7 +98,7 @@ value='+'
 @endforeach
 </div>
 </main>
-
+<x-footer />
 </div>
 
 

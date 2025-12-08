@@ -76,9 +76,9 @@
 <span class="material-symbols-outlined text-text-light dark:text-text-dark transition-transform group-open:rotate-180">expand_more</span>
 </summary>
 <div class="flex flex-col gap-4 pb-5">
-<label class="flex flex-col w-full">
+<label class="flex flex-col w-full">   
 <p class="text-sm font-medium pb-2 text-text-light dark:text-text-dark">Full Name</p>
-<input class="form-input w-full rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark focus:border-primary focus:ring-primary placeholder:text-gray-400 dark:placeholder:text-gray-500 py-3 px-4 text-base" placeholder="John Doe" type="text" value=""/>
+<input class="form-input w-full rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark focus:border-primary focus:ring-primary placeholder:text-gray-400 dark:placeholder:text-gray-500 py-3 px-4 text-base" placeholder="John Doe" type="text" value='{{auth()->user()->name}}'/>
 </label>
 <label class="flex flex-col w-full">
 <p class="text-sm font-medium pb-2 text-text-light dark:text-text-dark">Street Address</p>

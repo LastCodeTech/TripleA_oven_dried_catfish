@@ -90,12 +90,17 @@
 </label>
 <div class="flex gap-4">
 <label class="flex flex-col flex-1">
-<p class="text-sm font-medium pb-2 text-text-light dark:text-text-dark">City</p>
-<input class="form-input w-full rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark focus:border-primary focus:ring-primary placeholder:text-gray-400 dark:placeholder:text-gray-500 py-3 px-4 text-base" placeholder="San Francisco" type="text" value=""/>
+<p class="text-sm font-medium pb-2 text-text-light dark:text-text-dark">city</p>
+<select name="" id="" class="w-full rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark focus:border-primary focus:ring-primary placeholder:text-gray-400 dark:placeholder:text-gray-500 py-3 px-4 text-base">
+  @foreach ($cities as $city)
+  <option value='{{$city->id}}'>{{$city->city}} - &#x20A6;{{$city ->deliveryPrice}}</option>
+  @endforeach
+</select>
 </label>
+
 <label class="flex flex-col flex-1">
-<p class="text-sm font-medium pb-2 text-text-light dark:text-text-dark">ZIP Code</p>
-<input class="form-input w-full rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark focus:border-primary focus:ring-primary placeholder:text-gray-400 dark:placeholder:text-gray-500 py-3 px-4 text-base" placeholder="94103" type="tel" value=""/>
+<p class="text-sm font-medium pb-2 text-text-light dark:text-text-dark">Phone Number</p>
+<input class="form-input w-full rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark focus:border-primary focus:ring-primary placeholder:text-gray-400 dark:placeholder:text-gray-500 py-3 px-4 text-base" placeholder="+234" type="tel" value=""/>
 </label>
 </div>
 </div>

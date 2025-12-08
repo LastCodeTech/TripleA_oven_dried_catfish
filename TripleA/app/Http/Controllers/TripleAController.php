@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use App\Models\Cart;
+use App\Models\City;
 use App\Models\Contactmsg;
 use App\Models\Product;
 use App\Models\User;
@@ -63,7 +64,8 @@ class TripleAController extends Controller
                     foreach($items as $goods){
                 $product_total += (int)$goods->product->price * $goods->quantity;
                     }
-        return view('checkout',compact('items','product_total'));
+        $cities = City::all();
+        return view('checkout',compact('items','product_total','cities'));
     }
    
     public function profile(){

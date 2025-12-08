@@ -55,12 +55,14 @@
 <div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
 <!-- Top App Bar -->
 
-  @if(session()->has('message'))
+  {{-- @if(session()->has('message'))
 <div class='flex justify-between'>
   <div></div>
   <div class="bg-green-300 py-2 border-2 border-green-800 my-1 px-2 rounded-xl"> <h2 class='text-xl'>{{session('message')}}</h2></div>
 </div>
-@endif
+@endif --}}
+<div class="h-5"></div>
+<x-toast />
 <!-- Hero Section -->
 <div class="@container">
 <div class="@[480px]:p-4 p-0">
@@ -97,13 +99,10 @@
     <div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-white dark:bg-background-dark shadow-[0_2px_8px_rgba(0,0,0,0.05)] dark:border dark:border-white/10 min-w-60">
 <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-t-xl flex flex-col" data-alt="Packaging for 1kg oven-dried catfish" style='background-image:  url("{{Storage::disk('public')->url($product->image)}}");'></div>
 <div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
-<div>
-<p class="text-text-light dark:text-text-dark font-body text-base font-medium leading-normal">{{$product->name}}</p>
-<p class="text-text-muted-light dark:text-text-muted-dark font-body text-sm font-normal leading-normal">{{$product->price}}</</p>
+<div class='flex justify-between'>
+<p class="text-text-light dark:text-text-dark font-body text-base font-medium leading-normal capitalize">{{$product->name}}</p>
+<p class="text-text-muted-light dark:text-text-muted-dark font-body text-sm font-normal leading-normal">&#x20A6;{{number_format($product->price,2)}}</</p>
 </div>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/10 dark:bg-white/10 text-primary dark:text-secondary font-body text-sm font-bold leading-normal tracking-[0.015em]">
-<span class="truncate">Add to Cart</span>
-</button>
 </div>
 </div>
 @endforeach

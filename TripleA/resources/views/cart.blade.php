@@ -54,7 +54,11 @@
   </style>
   </head>
 <body class="font-display bg-background-light dark:bg-background-dark">
-    <x-header />
+    <x-header :count="$count"/>
+
+    
+{{-- <a href="{{route('api.page')}}">Check the API page</a> --}}
+
 <div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
 <main class="flex-grow pb-56 mb-20"> <!-- Padding bottom to avoid overlap with sticky footer -->
 <!-- Cart Items List -->
@@ -98,7 +102,7 @@
 <div class="space-y-2">
 <div class="flex justify-between gap-x-6">
 <p class="text-neutral-text-light/80 dark:text-neutral-text-dark/80 text-sm font-normal leading-normal">Subtotal</p>
-<p class="text-neutral-text-light dark:text-neutral-text-dark text-sm font-medium leading-normal text-right">$95.00</p>
+<p class="text-neutral-text-light dark:text-neutral-text-dark text-sm font-medium leading-normal text-right">&#x20A6;{{number_format( $product_total,2)}}</p>
 </div>
 <div class="flex justify-between gap-x-6">
 <p class="text-neutral-text-light/80 dark:text-neutral-text-dark/80 text-sm font-normal leading-normal">Shipping</p>

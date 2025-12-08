@@ -1,4 +1,12 @@
   
+  @props([
+    'count' => 0
+    ])
+
+    @php
+     use App\Models\Cart;   
+    @endphp
+  
   <header class="w-full bg-white shadow-sm px-4 py-3 sticky top-0 z-50">
     <div class="flex items-center justify-between">
 
@@ -34,7 +42,15 @@
            <button class="text-2xl  text-[#1a4c42] hover:text-yellow-600 relative">
                 <a href="{{route('cart')}}"><i class="fa-solid fa-basket-shopping"></i></a>
                 <!-- Cart count -->
-                <span class="absolute -top-1 -right-2 bg-red-600 text-white text-xs px-1.5 rounded-full">3</span>
+                <span class="absolute -top-1 -right-2 bg-red-600 text-white text-xs px-1.5 rounded-full">
+                    {{-- {{$count}} --}}
+
+                    @php
+                     $count = Cart::where('user_id',Auth::id())->count();   
+
+                     echo $count;
+                    @endphp
+                </span>
             </button>
             <button class="text-2xl  text-[#1a4c42] hover:text-yellow-600">
               <a href="{{route('dashboard')}}">  <i class="fa-solid fa-user"></i></a>

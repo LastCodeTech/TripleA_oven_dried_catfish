@@ -40,7 +40,7 @@
     </script>
 <style>
     body {
-      min-height: max(884px, 100dvh);
+      /* min-height: max(884px, 100dvh); */
     }
   </style>
   </head>

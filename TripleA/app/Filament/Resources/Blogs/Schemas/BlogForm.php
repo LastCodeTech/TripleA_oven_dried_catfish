@@ -15,6 +15,7 @@ class BlogForm
             ->components([
                 FileUpload::make('image')
                     ->image()
+                    ->disk('public')
                     ->required(),
                 TextInput::make('topic')
                     ->required(),

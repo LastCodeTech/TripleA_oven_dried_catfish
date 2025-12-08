@@ -46,6 +46,7 @@
   </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
 <x-header />
+<x-toast />
     <div class="relative min-h-screen w-full flex-col">
 <main class="flex flex-col gap-6 p-4 pb-28">
 <!-- Hero Section -->
@@ -53,7 +54,7 @@
 <h2 class="text-3xl font-bold tracking-tight text-text-light dark:text-text-dark">Contact Us</h2>
 <p class="mt-2 text-base text-text-light/80 dark:text-text-dark/80">We're here to help. Reach out with any questions.</p>
 {{-- toast --}}
-@if(session()->has('message'))
+{{-- @if(session()->has('message'))
 <div class='flex justify-between'>
   <div></div>
   <div class="bg-green-300 py-2 border-2 border-green-800 my-1 px-2 rounded-xl"> <h2 class='text-xl'>{{session('message')}}</h2></div>
@@ -64,7 +65,8 @@
   <div></div>
   <div class="bg-red-300 py-2 border-2 border-red-800 my-1 px-2 rounded-xl"> <h2 class='text-xl'>{{session('error')}}</h2></div>
 </div>
-@endif
+@endif --}}
+
 </section>
 <!-- Contact Form -->
 <section class="rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-4 md:mx-[10rem] shadow-sm">

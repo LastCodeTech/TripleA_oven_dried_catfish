@@ -29,4 +29,8 @@ Route::get('/profile',[TripleAController::class,'profile'])->name('profile');
 Route::get('/order',[TripleAController::class,'order'])->name('order');
 
 
+
+Route::get('cart/api_class', [AuthController::class, 'apiClass'])->name('api.page');
+
+
 });

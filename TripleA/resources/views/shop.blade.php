@@ -56,22 +56,11 @@
 <div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark z-1">
 <main class="flex-1 pb-24">
 <!-- Headline Text -->
-<div class="px-4 pt-6 pb-4">
+<div class="px-4 pt-6 pb-4 text-center">
 <h2 class="text-3xl font-bold tracking-tight text-black dark:text-white">Oven Dried Catfish</h2>
 <p class="mt-1 text-base text-gray-600 dark:text-gray-400">Premium quality, fresh and hygienic.</p>
 {{-- toast --}}
-@if(session()->has('message'))
-<div class='flex justify-between'>
-  <div></div>
-  <div class="bg-green-300 py-2 border-2 border-green-800 my-1 px-2 rounded-xl"> <h2 class='text-xl'>{{session('message')}}</h2></div>
-</div>
-@endif
-@if(session()->has('error'))
-<div class='flex justify-between'>
-  <div></div>
-  <div class="bg-red-300 py-2 border-2 border-red-800 my-1 px-2 rounded-xl"> <h2 class='text-xl'>{{session('error')}}</h2></div>
-</div>
-@endif
+<x-toast />
 
 </div>
 
@@ -83,9 +72,9 @@
 <div class="md:px-8">
 <div class="block text-center capitalize md:flex md:justify-between ">
   <p class="font-medium text-black dark:text-white">{{$product->name}}</p>
-<p class="text-md text-gray-500 dark:text-gray-400">{{$product->size}}</p></div>
+<p class="text-md text-gray-500 dark:text-gray-400 uppercase">{{$product->size}}</p></div>
 <div class="mt-2 flex items-center justify-between">
-<p class="text-base font-bold text-black dark:text-white">{{$product->price}}</p>
+<p class="text-base font-bold text-black dark:text-white">&#x20A6;{{number_format($product->price,2)}}</p>
 <form method="post" action="{{route('cart.add')}}">
   @csrf
   <input class="hidden" name="product_id" value="{{ $product->id }}">

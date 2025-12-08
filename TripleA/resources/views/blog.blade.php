@@ -50,7 +50,7 @@
     </script>
 <style>
     body {
-      min-height: max(884px, 100dvh);
+      /* min-height: max(884px, 100dvh); */
     }
   </style>
   </head>
@@ -62,9 +62,9 @@
 @foreach($blogs as $blog)
 <!-- Featured Section -->
 <section class="px-4">
-  {{dd(Storage::disk('public')->url($blog->image))}}
+  {{-- {{dd(Storage::disk('public')->url($blog->image))}} --}}
 <div class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-sm bg-white/50 dark:bg-black/20">
-<div class="w-full bg-center bg-no-repeat aspect-[4/4] md:aspect-[4/1] bg-cover" data-alt="A delicious looking bowl of spicy catfish pepper soup, garnished with fresh herbs" style='background-image: url("");'></div>
+<div class="w-full bg-center bg-no-repeat aspect-[4/4] md:aspect-[4/1] bg-cover"  style='background-image: url("{{Storage::disk('public')->url($blog->image)}}");'></div>
 <div class="flex w-full grow flex-col items-stretch justify-center gap-2 p-4">
 <h3 class="text-primary dark:text-accent text-xl font-bold leading-tight tracking-[-0.015em] font-display">{{$blog->topic}}</h3>
 <p class="text-text-light/80 dark:text-text-dark/80 text-sm font-normal leading-relaxed font-body">{{$blog->description}}</p>
@@ -82,6 +82,8 @@
 </div>
 </section>
 @endforeach
+
 </div>
+
 <x-footer />
 </body></html>

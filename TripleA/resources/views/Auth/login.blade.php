@@ -85,10 +85,10 @@
 <label class="flex flex-col min-w-40 flex-1">
 <p class="text-text-light dark:text-text-dark text-base font-medium leading-normal pb-2">Password</p>
 <div class="relative flex w-full flex-1 items-stretch">
-<input name='password' class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark focus:border-accent dark:focus:border-accent h-14 placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark p-[15px] pr-12 text-base font-normal leading-normal ring-0 focus:ring-2 focus:ring-accent/30" placeholder="Enter your password" type="password" value=""/>
-<button aria-label="Toggle password visibility" class="text-text-muted-light dark:text-text-muted-dark absolute inset-y-0 right-0 flex items-center pr-4">
-<span class="material-symbols-outlined">visibility</span>
-</button>
+<input name='password' class="passwordInput form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark focus:border-accent dark:focus:border-accent h-14 placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark p-[15px] pr-12 text-base font-normal leading-normal ring-0 focus:ring-2 focus:ring-accent/30" placeholder="Enter your password" type="password" value=""/>
+<span  class="toggle-password text-text-muted-light dark:text-text-muted-dark absolute inset-y-0 right-0 flex items-center pr-4">
+<i class="fa-solid fa-eye"></i>
+</span>
 </div>
 @error('password')
 <h2 class="text-sm md:text-base font-semibold capitalize text-red-600 pt-2">{{$message}}</h2>  
@@ -118,4 +118,19 @@
 </div>
 </div>
 </div>
+
+<script>
+    let togglePassword=document.querySelector('.toggle-password');
+    let passwordInput=document.querySelector('.passwordInput');
+
+    togglePassword.addEventListener('click',function(){
+      if(passwordInput.type === 'password'){
+        passwordInput.type='text';
+      }
+      else{
+        passwordInput.type='password';
+      }
+    })
+
+</script>
 </body></html>

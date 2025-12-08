@@ -153,21 +153,21 @@
 <div class="space-y-2">
 <div class="flex justify-between text-sm">
 <p class="text-gray-600 dark:text-gray-400">Subtotal</p>
-<p class="font-medium text-text-light dark:text-text-dark">$40.50</p>
+<p class="font-medium text-text-light dark:text-text-dark">&#x20A6;{{number_format($product_total,2)}}</p>
 </div>
 <div class="flex justify-between text-sm">
 <p class="text-gray-600 dark:text-gray-400">Shipping</p>
-<p class="font-medium text-text-light dark:text-text-dark">$5.00</p>
+<p class="font-medium text-text-light dark:text-text-dark">&#x20A6;0.00</p>
 </div>
 <div class="flex justify-between text-sm">
 <p class="text-gray-600 dark:text-gray-400">Estimated Taxes</p>
-<p class="font-medium text-text-light dark:text-text-dark">$3.65</p>
+<p class="font-medium text-text-light dark:text-text-dark">&#x20A6;0.00</p>
 </div>
 </div>
 <div class="my-4 h-px bg-border-light dark:bg-border-dark"></div>
 <div class="flex justify-between">
 <p class="text-lg font-bold text-text-light dark:text-text-dark">Grand Total</p>
-<p class="text-lg font-bold text-text-light dark:text-text-dark">$49.15</p>
+<p class="text-lg font-bold text-text-light dark:text-text-dark">&#x20A6;{{number_format($product_total,2)}}</p>
 </div>
 </div>
 </div>
@@ -176,11 +176,11 @@
 <footer class="fixed bottom-0 left-0 right-0 z-10 border-t border-border-light dark:border-border-dark bg-background-light/90 dark:bg-background-dark/90 p-4 backdrop-blur-sm">
 <div class="flex items-center justify-between mb-3">
 <p class="text-gray-600 dark:text-gray-400">Total</p>
-<p class="font-display text-2xl font-bold text-text-light dark:text-text-dark">$49.15</p>
+<p class="font-display text-2xl font-bold text-text-light dark:text-text-dark">&#x20A6;{{number_format($product_total,2)}}</p>
 </div>
 <button class="flex w-full items-center justify-center gap-2 rounded-full bg-primary py-4 text-center text-base font-bold text-white transition hover:bg-primary/90">
 <span class="material-symbols-outlined text-xl">lock</span>
-<span>Pay $49.15</span>
+<span>Pay &#x20A6;{{number_format($product_total,2)}}</span>
 </button>
 </footer>
 </div>

@@ -48,16 +48,22 @@ class TripleAController extends Controller
             // $total_cost=$product_total*$product_quantity;
             
         }
-        return view('cart',compact('viewCarts','product_total'));
+
+        $count = Cart::where('user_id',Auth::id())->count();
+        return view('cart',compact('viewCarts','product_total', 'count'));
     }
     public function dashboard(){
         return view('dashboard');
     }
     public function checkout(){
+        $product_total=0;
          $items=Cart::where('user_id',Auth::id())
                     ->with('product')
                     ->get();
-        return view('checkout',compact('items'));
+                    foreach($items as $goods){
+                $product_total += (int)$goods->product->price * $goods->quantity;
+                    }
+        return view('checkout',compact('items','product_total'));
     }
    
     public function profile(){

@@ -17,10 +17,16 @@ class TripleAController extends Controller
         $products=Product::all();
         return view('home',compact('products'));
     }
-    public function shop(){
-         $products=Product::all();
-        return view('shop',compact('products'));
-    }
+   public function shop()
+{
+    $products = Product::all();
+
+    $inCarts = Cart::where('user_id', Auth::id())
+        ->pluck('product_id')  
+        ->toArray();
+    return view('shop', compact('products', 'inCarts'));
+}
+
     public function about(){
         return view('about');
     }

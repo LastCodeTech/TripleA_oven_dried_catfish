@@ -36,10 +36,6 @@ Route::middleware('auth')->group(function () {
 
 
 
-    // Route::get('/checkout', [CheckoutController::class, 'showCheckout'])
-    //     ->name('checkout');
-
-
     Route::post('/checkout/process', [CheckoutController::class, 'processCheckout'])
         ->name('checkout.process');
 

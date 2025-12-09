@@ -69,9 +69,9 @@
             <!-- Top App Bar -->
             <header
                 class="sticky top-0 z-10 flex items-center bg-background-light/80 dark:bg-background-dark/80 p-4 backdrop-blur-sm">
-                <button class="flex size-10 shrink-0 items-center justify-center text-text-light dark:text-text-dark">
+                <span class="flex size-10 shrink-0 items-center justify-center text-text-light dark:text-text-dark">
                     <a href="{{ route('cart') }}"><span class="material-symbols-outlined">arrow_back_ios_new</span></a>
-                </button>
+                </span>
                 <h1 class="font-display text-2xl font-bold flex-1 text-center pr-10">Checkout</h1>
             </header>
             <!-- Progress Stepper -->
@@ -100,9 +100,9 @@
                                     class="form-input w-full rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark focus:border-primary focus:ring-primary placeholder:text-gray-400 dark:placeholder:text-gray-500 py-3 px-4 text-base"
                                     placeholder="John Doe" type="text" value='{{ auth()->user()->name }}' />
                             </label>
-                             @error('name')
-                                  <span class="text-red-600 text-sm p-2 mb-2">{{$message}}</span>
-                                @enderror
+                            @error('name')
+                                <span class="text-red-600 text-sm p-2 mb-2">{{ $message }}</span>
+                            @enderror
                             <label class="flex flex-col w-full">
                                 <p class="text-sm font-medium pb-2 text-text-light dark:text-text-dark">Street Address
                                 </p>
@@ -110,26 +110,23 @@
                                     class="form-input w-full rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark focus:border-primary focus:ring-primary placeholder:text-gray-400 dark:placeholder:text-gray-500 py-3 px-4 text-base"
                                     placeholder="1234 Market St" type="text" value="" />
                             </label>
-                             @error('address')
-                                  <span class="text-red-600 text-sm p-2 mb-2">{{$message}}</span>
-                                @enderror
-                            {{-- <label class="flex flex-col w-full">
-<p class="text-sm font-medium pb-2 text-text-light dark:text-text-dark">Apartment, suite, etc. (optional)</p>
-<input class="form-input w-full rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark focus:border-primary focus:ring-primary placeholder:text-gray-400 dark:placeholder:text-gray-500 py-3 px-4 text-base" placeholder="Apt 2B" type="text" value=""/>
-</label> --}}
+                            @error('address')
+                                <span class="text-red-600 text-sm p-2 mb-2">{{ $message }}</span>
+                            @enderror
                             <div class="flex gap-4">
                                 <label class="flex flex-col flex-1">
                                     <p class="text-sm font-medium pb-2 text-text-light dark:text-text-dark">city</p>
                                     <select name="city" id="city" required
                                         class="w-full rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark focus:border-primary focus:ring-primary placeholder:text-gray-400 dark:placeholder:text-gray-500 py-3 px-4 text-base">
                                         @foreach ($cities as $city)
-                                            <option value='{{ $city->id }}' data-content="{{ $city->deliveryPrice }}">{{ $city->city }} -
+                                            <option value='{{ $city->id }}' data-city="{{ $city->deliveryPrice }}">
+                                                {{ $city->city }} -
                                                 &#x20A6;{{ $city->deliveryPrice }}</option>
                                         @endforeach
                                     </select>
                                 </label>
                                 @error('city')
-                                  <span class="text-red-600 text-sm p-2">{{$message}}</span>
+                                    <span class="text-red-600 text-sm p-2">{{ $message }}</span>
                                 @enderror
 
                                 <label class="flex flex-col flex-1">
@@ -224,7 +221,7 @@
                             <div class="flex justify-between text-sm">
                                 <p class="text-gray-600 dark:text-gray-400">Delivery</p>
                                 <p class="font-medium text-text-light dark:text-text-dark" id="delivery">
-                                    &#x20A6;0.07777770</p>
+                                    &#x20A6;0..00</p>
                             </div>
                             <div class="flex justify-between text-sm">
                                 <p class="text-gray-600 dark:text-gray-400">Estimated Taxes</p>
@@ -234,8 +231,9 @@
                         <div class="my-4 h-px bg-border-light dark:bg-border-dark"></div>
                         <div class="flex justify-between">
                             <p class="text-lg font-bold text-text-light dark:text-text-dark">Grand Total</p>
-                            <p class="text-lg font-bold text-text-light dark:text-text-dark">
-                                &#x20A6;{{ number_format($product_total, 2) }}</p>
+                            <p class="text-lg font-bold text-text-light dark:text-text-dark" id="total-price3"
+                                data-value="{{ $product_total }}">
+                                &#x20A6;<strong id='tt3'>{{ number_format($product_total, 2) }}</strong></p>
                         </div>
                     </div>
                 </div>
@@ -246,15 +244,33 @@
                 <div class="flex items-center justify-between mb-3">
                     <p class="text-gray-600 dark:text-gray-400">Total</p>
                     <p class="font-display text-2xl font-bold text-text-light dark:text-text-dark">
-                        &#x20A6;{{ number_format($product_total, 2) }}</p>
+                        <span id="total-price" data-value="{{ $product_total }}">&#x20A6;<strong
+                                id='tt'>{{ number_format($product_total, 2) }}</strong></span>
+                    </p>
                 </div>
 
-
+                {{-- 
                 <button
+                type="submit"
                     class="flex w-full items-center justify-center gap-2 rounded-full bg-primary py-4 text-center text-base font-bold text-white transition hover:bg-primary/90">
                     <span class="material-symbols-outlined text-xl">lock</span>
-                    <span>Pay &#x20A6;{{ number_format($product_total, 2) }}</span>
+                    <span>Pay <span id="total-price2" data-value="{{ $product_total }}">&#x20A6;<strong id='tt2'>{{ number_format($product_total, 2) }}</strong></span></span>
+                </button> --}}
+
+                <button type="submit"
+                    class="flex w-full items-center justify-center gap-2 rounded-full bg-primary py-4 text-center text-base font-bold text-white transition hover:bg-primary/90">
+                    <span class="material-symbols-outlined text-xl">lock</span>
+                    <span>
+                        Pay
+                        <span id="total-price2" data-value="{{ $product_total }}">
+                            ₦<strong id="tt2">{{ number_format($product_total, 2) }}</strong>
+                        </span>
+                    </span>
                 </button>
+
+
+
+
 
 
 
@@ -267,12 +283,30 @@
     <script>
         let city = document.getElementById('city');
         let delivery = document.getElementById('delivery');
+        let tt = document.getElementById('tt');
+        let tt2 = document.getElementById('tt2');
+        let tt3 = document.getElementById('tt3');
+        let priceNumber = Number(document.getElementById('total-price').dataset.value);
+        let priceNumber2 = Number(document.getElementById('total-price2').dataset.value);
+        let priceNumber3 = Number(document.getElementById('total-price3').dataset.value);
 
         city.addEventListener('change', () => {
-            let deliveryValue = city.dataset.content;
-
-            alert(deliveryValue);
+            sumGoods();
         });
+
+        setTimeout(() => {
+            sumGoods();
+        }, 100);
+
+        function sumGoods() {
+            let deliveryValue = city.options[city.selectedIndex];
+
+            let deliveryPrice = Number(delivery.textContent = deliveryValue.dataset.city);
+            everything = deliveryPrice + priceNumber;
+            tt.textContent = everything;
+            tt2.textContent = everything;
+            tt3.textContent = everything;
+        }
     </script>
 </body>
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cart;
+use App\Models\City;
 use App\Models\Order;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -40,6 +41,13 @@ class CheckoutController extends Controller
 
         
 
+        $deliveryFee = City::find($validated['city'])->deliveryPrice;
+
+        
+        $finalTotal = (int) $total + (int) $deliveryFee;
+
+       
+
 
 
         $order = Order::create([
@@ -58,7 +66,7 @@ class CheckoutController extends Controller
         $paystack = new SimplePaystackService();
 
         $payment = $paystack->makePayment(
-            amount: $total,
+            amount: $finalTotal,
             customerEmail: $user->email,
             callbackUrl: route('payment.callback'),
             metadata: [
@@ -178,6 +186,7 @@ class CheckoutController extends Controller
 
     public function success()
     {
+         Cart::where('user_id', Auth::id())->delete();
         return view('checkout-success');
     }
 

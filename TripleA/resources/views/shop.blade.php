@@ -75,6 +75,11 @@
 <p class="text-md text-gray-500 dark:text-gray-400 uppercase">{{$product->size}}</p></div>
 <div class="mt-2 flex items-center justify-between">
 <p class="text-base font-bold text-black dark:text-white">&#x20A6;{{number_format($product->price,2)}}</p>
+@if(in_array($product->id, $inCarts))
+        <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">
+            In cart
+        </span>
+    @endif
 <form method="post" action="{{route('cart.add')}}">
   @csrf
   <input class="hidden" name="product_id" value="{{ $product->id }}">

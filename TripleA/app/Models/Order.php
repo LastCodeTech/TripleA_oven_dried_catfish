@@ -46,4 +46,7 @@ class Order extends Model
     {
         return $this->belongsTo(User::class);
     }
+    public function City(){
+        $this->belongsTo(City::class);
+    }
 }

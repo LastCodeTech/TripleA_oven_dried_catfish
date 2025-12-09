@@ -10,4 +10,7 @@ class City extends Model
         'city',
         'deliveryPrice'
     ];
+    public function order(){
+        $this->hasMany(Order::class);
+    }
 }

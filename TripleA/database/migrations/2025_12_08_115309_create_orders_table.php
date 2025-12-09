@@ -12,8 +12,20 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('orders', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+                 $table->id();  
+            $table->string('order_number')->unique(); 
+            $table->foreignId('user_id')->nullable()->constrained()->onDelete('set null');
+            $table->foreignId('city_id')->nullable()->constrained()->onDelete('set null');
+            $table->string('customer_email');   
+            $table->string('address');   
+            $table->string('tel');
+            $table->decimal('amount', 10, 2); 
+            $table->text('items'); 
+            $table->enum('status', ['pending', 'paid', 'failed', 'shipped', 'delivered'])->default('pending');
+            $table->string('payment_reference')->nullable();
+            $table->text('payment_data')->nullable(); 
+            $table->timestamp('paid_at')->nullable();
+            $table->timestamps(); 
         });
     }
 

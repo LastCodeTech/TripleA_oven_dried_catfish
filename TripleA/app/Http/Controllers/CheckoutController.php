@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Cart;
 use App\Models\City;
 use App\Models\Order;
+use App\Models\User;
+use App\Notifications\Newnotification;
+use App\Notifications\Ordersuccessful;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -120,7 +123,6 @@ class CheckoutController extends Controller
             'payment_data' => $verification,
             'paid_at' => now(),
         ]);
-
         session()->forget(['current_order_id', 'payment_reference']);
 
         return redirect()->route('checkout.success')
@@ -185,7 +187,8 @@ class CheckoutController extends Controller
 
 
     public function success()
-    {
+    { 
+             Auth::user()->notify(new Ordersuccessful(''));
          Cart::where('user_id', Auth::id())->delete();
         return view('checkout-success');
     }

@@ -100,7 +100,7 @@
                     <div class="flex w-full flex-wrap items-end gap-4 pb-4">
                         <label class="flex flex-col min-w-40 flex-1">
                             <p class="text-text-light dark:text-text-dark text-base font-medium leading-normal pb-2">
-                                Full Name</p>
+                                Phone Number</p>
                             <input name="tel"
                                 class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark focus:border-accent dark:focus:border-accent h-14 placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark p-[15px] text-base font-normal leading-normal ring-0 focus:ring-2 focus:ring-accent/30"
                                 placeholder="Enter your phone number" type="tel" value="{{ old('tel') }}" />
